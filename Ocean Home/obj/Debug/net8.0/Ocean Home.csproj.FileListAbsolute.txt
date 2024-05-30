@@ -1,0 +1,60 @@
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\bin\Debug\net8.0\appsettings.json
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\bin\Debug\net8.0\Ocean Home.staticwebassets.runtime.json
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\bin\Debug\net8.0\Ocean Home.exe
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\bin\Debug\net8.0\Ocean Home.deps.json
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\bin\Debug\net8.0\Ocean Home.runtimeconfig.json
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\bin\Debug\net8.0\Ocean Home.dll
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\bin\Debug\net8.0\Ocean Home.pdb
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.AssemblyInfoInputs.cache
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.AssemblyInfo.cs
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.csproj.CoreCompileInputs.cache
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.RazorAssemblyInfo.cache
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.RazorAssemblyInfo.cs
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\staticwebassets\msbuild.Ocean Home.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\staticwebassets\msbuild.build.Ocean Home.props
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Ocean Home.props
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Ocean Home.props
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\scopedcss\bundle\Ocean Home.styles.css
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\scopedcss\projectbundle\Ocean Home.bundle.scp.css
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.dll
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\refint\Ocean Home.dll
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.pdb
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\Ocean Home.genruntimeconfig.cache
+C:\Users\iT\source\repos\Ocean Home\Ocean Home\obj\Debug\net8.0\ref\Ocean Home.dll
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\bin\Debug\net8.0\appsettings.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\bin\Debug\net8.0\Ocean Home.staticwebassets.runtime.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\bin\Debug\net8.0\Ocean Home.exe
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\bin\Debug\net8.0\Ocean Home.deps.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\bin\Debug\net8.0\Ocean Home.runtimeconfig.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\bin\Debug\net8.0\Ocean Home.dll
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\bin\Debug\net8.0\Ocean Home.pdb
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.AssemblyInfoInputs.cache
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.AssemblyInfo.cs
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.csproj.CoreCompileInputs.cache
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.RazorAssemblyInfo.cache
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.RazorAssemblyInfo.cs
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\staticwebassets\msbuild.Ocean Home.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\staticwebassets\msbuild.build.Ocean Home.props
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Ocean Home.props
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Ocean Home.props
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\scopedcss\bundle\Ocean Home.styles.css
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\scopedcss\projectbundle\Ocean Home.bundle.scp.css
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.dll
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\refint\Ocean Home.dll
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.pdb
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\Ocean Home.genruntimeconfig.cache
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Debug\net8.0\ref\Ocean Home.dll
