@@ -58,3 +58,4 @@ C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Rel
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\Ocean Home.pdb
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\Ocean Home.genruntimeconfig.cache
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\ref\Ocean Home.dll
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\Ocean Home.sourcelink.json

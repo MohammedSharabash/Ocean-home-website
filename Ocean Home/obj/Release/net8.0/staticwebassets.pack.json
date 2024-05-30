@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\Content\\icon\\calll.png"
     },
     {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\download (1).png",
+      "PackagePath": "staticwebassets\\Content\\icon\\download (1).png"
+    },
+    {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\errow.png",
       "PackagePath": "staticwebassets\\Content\\icon\\errow.png"
     },
@@ -255,6 +259,34 @@
     {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\google.png",
       "PackagePath": "staticwebassets\\Content\\icon\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\i1.jpeg",
+      "PackagePath": "staticwebassets\\Content\\icon\\i1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\i2.jpeg",
+      "PackagePath": "staticwebassets\\Content\\icon\\i2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\i3.jpeg",
+      "PackagePath": "staticwebassets\\Content\\icon\\i3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\i4.jpeg",
+      "PackagePath": "staticwebassets\\Content\\icon\\i4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\i5.jpeg",
+      "PackagePath": "staticwebassets\\Content\\icon\\i5.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\i6.jpeg",
+      "PackagePath": "staticwebassets\\Content\\icon\\i6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\i7.jpeg",
+      "PackagePath": "staticwebassets\\Content\\icon\\i7.jpeg"
     },
     {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\icon\\instagram.png",
@@ -367,6 +399,54 @@
     {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\pc_layout.png",
       "PackagePath": "staticwebassets\\Content\\images\\pc_layout.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s1.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s10.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s10.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s11.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s11.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s12.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s12.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s2.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s3.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s4.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s5.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s5.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s6.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s7.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s7.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s8.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s8.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\s9.jpeg",
+      "PackagePath": "staticwebassets\\Content\\images\\s9.jpeg"
     },
     {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\Content\\images\\search_icon.png",
