@@ -1,6 +1,7 @@
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\PubTmp\Out\Ocean Home.exe
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\PubTmp\Out\wwwroot\style.css
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\PubTmp\Out\Ocean Home.dll
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\PubTmp\Out\Ocean Home.deps.json
 C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home\obj\Release\net8.0\PubTmp\Out\Ocean Home.runtimeconfig.json

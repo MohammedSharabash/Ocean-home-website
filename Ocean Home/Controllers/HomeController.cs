@@ -17,6 +17,10 @@ namespace Ocean_Home.Controllers
         {
             return View();
         }
+        public IActionResult OldSite()
+        {
+            return View();
+        }
         public IActionResult about()
         {
             return View();

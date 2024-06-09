@@ -649,16 +649,172 @@
       "PackagePath": "staticwebassets\\Content\\js\\slider-setting.js"
     },
     {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\dark-style.css",
+      "PackagePath": "staticwebassets\\css\\dark-style.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\isotope.min.css",
+      "PackagePath": "staticwebassets\\css\\isotope.min.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\js_composer.min.css",
+      "PackagePath": "staticwebassets\\css\\js_composer.min.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\rs6.css",
+      "PackagePath": "staticwebassets\\css\\rs6.css"
+    },
+    {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\css\\style.min.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\style2.css",
+      "PackagePath": "staticwebassets\\css\\style2.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\style_dark.css",
+      "PackagePath": "staticwebassets\\css\\style_dark.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\data.json",
+      "PackagePath": "staticwebassets\\data.json"
     },
     {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\giphy.gif",
+      "PackagePath": "staticwebassets\\giphy.gif"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\animsition.min.js",
+      "PackagePath": "staticwebassets\\js\\animsition.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\comment-reply.min.js",
+      "PackagePath": "staticwebassets\\js\\comment-reply.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\core.min.js",
+      "PackagePath": "staticwebassets\\js\\core.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\frontend-gtag.min.js",
+      "PackagePath": "staticwebassets\\js\\frontend-gtag.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\gmap.js",
+      "PackagePath": "staticwebassets\\js\\gmap.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\imagesloaded.min.js",
+      "PackagePath": "staticwebassets\\js\\imagesloaded.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\imagesloaded.pkgd.min.js",
+      "PackagePath": "staticwebassets\\js\\imagesloaded.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets\\js\\isotope.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\isotope2.pkgd.min.js",
+      "PackagePath": "staticwebassets\\js\\isotope2.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\jquery-migrate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-migrate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\jquery.pagepiling.js",
+      "PackagePath": "staticwebassets\\js\\jquery.pagepiling.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\jquery.stellar.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.stellar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\js_composer_front.min.js",
+      "PackagePath": "staticwebassets\\js\\js_composer_front.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\js\\plugins.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\revolution.tools.min.js",
+      "PackagePath": "staticwebassets\\js\\revolution.tools.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\rs6.min.js",
+      "PackagePath": "staticwebassets\\js\\rs6.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\scripts-dark.js",
+      "PackagePath": "staticwebassets\\js\\scripts-dark.js"
+    },
+    {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\sly.min.js",
+      "PackagePath": "staticwebassets\\js\\sly.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\js\\wp-emoji-release.min.js",
+      "PackagePath": "staticwebassets\\js\\wp-emoji-release.min.js"
     },
     {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -887,6 +1043,134 @@
     {
       "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\style.css",
+      "PackagePath": "staticwebassets\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\360_F_593461993_iW9eELnmY8Ife0mwawZ2GGOzD4a2R1YT.jpg",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\360_F_593461993_iW9eELnmY8Ife0mwawZ2GGOzD4a2R1YT.jpg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\5d1d2464828d4fb380526866d17d21aa.jpg",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\5d1d2464828d4fb380526866d17d21aa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\cipriani-1024x1024.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\cipriani-1024x1024.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\cipriani-150x150.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\cipriani-150x150.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\cipriani-300x300.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\cipriani-300x300.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\cipriani-370x370.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\cipriani-370x370.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\cipriani-685x685.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\cipriani-685x685.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\cipriani-768x768.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\cipriani-768x768.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\cipriani.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\cipriani.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\hormann-1024x983.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\hormann-1024x983.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\hormann-300x288 (1).png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\hormann-300x288 (1).png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\hormann-300x288.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\hormann-300x288.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\hormann-768x737.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\hormann-768x737.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\hormann.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\hormann.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\keim-1024x1024.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\keim-1024x1024.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\keim-150x150.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\keim-150x150.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\keim-300x300.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\keim-300x300.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\keim-370x370 (1).png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\keim-370x370 (1).png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\keim-370x370.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\keim-370x370.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\keim-685x685.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\keim-685x685.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\keim-768x768.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\keim-768x768.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\keim.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\keim.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro-1024x1024.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro-1024x1024.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro-150x150.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro-150x150.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro-300x300.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro-300x300.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro-370x370 (1).png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro-370x370 (1).png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro-370x370.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro-370x370.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro-685x685 (1).png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro-685x685 (1).png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro-685x685.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro-685x685.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro-768x768.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro-768x768.png"
+    },
+    {
+      "Id": "C:\\Users\\iT\\source\\repos\\MohammedSharabash\\Ocean-home-website\\Ocean Home\\wwwroot\\wp-content\\uploads\\2022\\05\\wippro.png",
+      "PackagePath": "staticwebassets\\wp-content\\uploads\\2022\\05\\wippro.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ocean Home.Microsoft.AspNetCore.StaticWebAssets.props",
