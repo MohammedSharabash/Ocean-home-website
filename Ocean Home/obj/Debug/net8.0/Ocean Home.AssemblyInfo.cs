@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ocean Home")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a392076ae07bf58b6d275ee0ae345e048c932c3e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9c7941f82a67449af8f2e7231a7c9960e36b6bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ocean Home")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ocean Home")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

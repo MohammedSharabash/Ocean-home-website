@@ -262,7 +262,7 @@ p, blockquote {
     }
 
 .team-hover {
-    background: rgba(231, 64, 17,0.8);
+    background: rgb(231 155 17 / 80%);
 }
 
 #managing_partner .add-new-text {
@@ -1316,6 +1316,9 @@ footer.footer .inline-block {
 .left {
     float: left;
 }
+.right {
+    float: right;
+}
 
 .h-360 {
     height: 32rem;
@@ -1560,7 +1563,7 @@ p, blockquote {
     }
 
 .team-hover {
-    background: rgba(231, 64, 17,0.8);
+    background: rgb(231 155 17 / 80%);
 }
 
 #managing_partner .add-new-text {

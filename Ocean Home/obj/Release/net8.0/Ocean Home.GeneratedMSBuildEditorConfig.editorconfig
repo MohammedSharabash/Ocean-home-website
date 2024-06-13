@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\iT\source\repos\MohammedSharabash\Ocean-home-website\Ocean Home
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/iT/source/repos/MohammedSharabash/Ocean-home-website/Ocean Home/Views/Home/about.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/iT/source/repos/MohammedSharabash/Ocean-home-website/Ocean Home/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +32,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/iT/source/repos/MohammedSharabash/Ocean-home-website/Ocean Home/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/iT/source/repos/MohammedSharabash/Ocean-home-website/Ocean Home/Views/Home/projectDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9qZWN0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/iT/source/repos/MohammedSharabash/Ocean-home-website/Ocean Home/Views/Home/projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9qZWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/iT/source/repos/MohammedSharabash/Ocean-home-website/Ocean Home/Views/Shared/Error.cshtml]

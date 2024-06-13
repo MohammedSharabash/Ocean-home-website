@@ -25,6 +25,14 @@ namespace Ocean_Home.Controllers
         {
             return View();
         }
+         public IActionResult projects()
+        {
+            return View();
+        }
+          public IActionResult projectDetails()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

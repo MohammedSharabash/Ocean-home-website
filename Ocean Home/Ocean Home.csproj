@@ -23,4 +23,11 @@
     <Folder Include="wwwroot\wp-content\uploads\2022\05\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Home\about.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
