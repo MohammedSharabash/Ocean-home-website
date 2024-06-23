@@ -1,0 +1,105 @@
+﻿@model Ocean_Home.Models.Domain.AboutUS
+@{
+    ViewBag.Title = "من نحن ";
+}
+
+<h1 class="text-center mb-30">@ViewBag.Title</h1>
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+@using (Html.BeginForm("Edit", "AboutUS", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(d => d.CreatedOn)
+    @Html.HiddenFor(d => d.DeletedOn)
+    @Html.HiddenFor(d => d.Id)
+    @Html.HiddenFor(d => d.IsDeleted)
+    @Html.HiddenFor(d => d.IsModified)
+    @Html.HiddenFor(d => d.ImageUrl)
+    @Html.HiddenFor(d => d.CoverImageUrl)
+    @Html.HiddenFor(d => d.ModifiedOn)
+    @Html.AntiForgeryToken()
+    <div class="row" style="margin:10px;">
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">نبذه عننا :</label>
+                <div class="col-sm-7">
+                    <textarea asp-for="Description" required id="Description" class="form-control valid" rows="7"> 
+                                                                           </textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="OurMessage" class="col-sm-5 control-label required">رسالتنا :</label>
+                <div class="col-sm-7">
+                    <textarea asp-for="OurMessage" required id="OurMessage" class="form-control valid" rows="7"> 
+                                                                           </textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="OurVision" class="col-sm-5 control-label required">رؤيتنا :</label>
+                <div class="col-sm-7">
+                    <textarea asp-for="OurVision" required id="OurVision" class="form-control valid" rows="7"> 
+                                                                           </textarea>
+                </div>
+            </div>
+        </div>
+        @if (Model.ImageUrl != null)
+        {
+            <div class="col-lg-6  mb-10">
+                <div class="form-group">
+                    <label for="Image" class="col-sm-5 control-label">الصوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/Course/@Model.ImageUrl" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">تغير الصورة :</label>
+                <div class="col-sm-7">
+                    <input name="Image" type="file" id="Image" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        @if (Model.CoverImageUrl != null)
+        {
+            <div class="col-lg-6 mb-10">
+                <div class="form-group">
+                    <label for="Image2" class="col-sm-5 control-label">الغلاف :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/Course/@Model.CoverImageUrl" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Image2" class="col-sm-5 control-label required">تغير صورة الغلاف :</label>
+                <div class="col-sm-7">
+                    <input name="Image2" type="file" id="Image" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row" style="margin:10px;">
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required"></label>
+                <div class="col-sm-7">
+                    <button style="text-align:center !important" type="submit" class="btn btn-success">تعديل</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+}

@@ -1,0 +1,94 @@
+﻿@model Ocean_Home.Models.ViewModels.SideMenuVM
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-right image">
+                @if (Model.UserImage != null)
+                {
+                    <img src="~/Content/Images/Users/@Model.UserImage" style="height:45px" class="img-circle" alt="@Model.Name" />
+                }
+                else
+                {
+                    <img src="~/Content/assets/imgs/avatar.png" style="height:45px" class="img-circle" alt="@Model.Name" />
+                }
+            </div>
+            <div class="pull-left info">
+                <p>@Model.Name</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> متواجد</a>
+            </div>
+        </div>
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="treeview  @(Context.Request.Path.ToString().ToLower().Contains("cp") ? "active" : "")">
+                <a href="@Url.Action("Index", "Cp")">
+                    <i class="fa fa-book"></i> <span>الرئيسية</span>
+                </a>
+            </li>
+            <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("manager") ? "active" : "")">
+                <a href="@Url.Action("Index", "manager")">
+                    <i class="fa fa-users"></i> <span>بيانات المدير</span>
+                </a>
+            </li>
+            <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("managingpartner") ? "active" : "")">
+                <a href="@Url.Action("ManagingPartner", "manager")">
+                    <i class="fa fa-users"></i> <span>شريكنا الإداري</span>
+                </a>
+            </li>
+            <li class="treeview  @(Context.Request.Path.ToString().ToLower().Contains("projectsdepartment") ? "active" : "")">
+                <a href="@Url.Action("Index", "ProjectsDepartment")">
+                    <i class="fa fa-user"></i> <span>أقسام المشاريع </span>
+                </a>
+            </li>
+            <li class="treeview  @(Context.Request.Path.ToString().ToLower().Contains("project") ? "active" : "")">
+                <a href="@Url.Action("Index", "Project")">
+                    <i class="fa fa-book"></i> <span>المشاريع</span>
+                </a>
+            </li>
+
+            <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("affiliates") ? "active" : "")">
+                <a href="@Url.Action("Index", "Affiliates")">
+                    <i class="fa fa-users"></i> <span>Our Affiliates</span>
+                </a>
+            </li>
+            <li class="treeview  @(Context.Request.Path.ToString().ToLower().Contains("jobsdepartment") ? "active" : "")">
+                <a href="@Url.Action("Index", "JobsDepartment")">
+                    <i class="fa fa-user"></i> <span>أقسام العاملين </span>
+                </a>
+            </li>
+            <li class="treeview  @(Context.Request.Path.ToString().ToLower().Contains("project") ? "active" : "")">
+                <a href="@Url.Action("Index", "Project")">
+                    <i class="fa fa-book"></i> <span>العاملين</span>
+                </a>
+            </li>
+            @*
+            <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("users") ? "active" : "")">
+            <a href="@Url.Action("Feedbacks", "Users")">
+            <i class="fa fa-users"></i> <span>أراء الطلاب</span>
+            </a>
+            </li> *@
+
+            <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("slider") ? "active" : "")">
+                <a href="@Url.Action("Index", "Slider")">
+                    <i class="fa fa-newspaper"></i> <span>إدارة السلايدر</span>
+                </a>
+            </li>
+
+            <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("aboutUS") ? "active" : "")">
+                <a href="@Url.Action("Index", "AboutUS")">
+                    <i class="fa fa-newspaper"></i> <span>من نحن</span>
+                </a>
+            </li>
+
+            <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("contactus") ? "active" : "")">
+                <a href="@Url.Action("Index", "ContactUs")">
+                    <i class="fa fa-newspaper"></i> <span>بيانات تواصل معنا</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
