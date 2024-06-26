@@ -12,8 +12,8 @@ namespace Ocean_Home.Models.Dtos
         public DateTime CreatedOn { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public long CourseId { get; set; }
-        public string CourseName { get; set; }
+        public long ProjectId { get; set; }
+        public string ProjectName { get; set; }
         public bool Free { get; set; }
         public string URL { get; set; }
         //public string URL2 { get; set; }

@@ -16,17 +16,17 @@ namespace Ocean_Home.Helper
             var folderName = "";
             switch (filePath)
             {
-                case FilePath.Course:
-                    folderName = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Course");
+                case FilePath.Project:
+                    folderName = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Project");
                     break;
         case FilePath.Slider:
                     folderName = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Slider");
                     break;
-        case FilePath.Instructor:
-                    folderName = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Instructor");
+        case FilePath.Manager:
+                    folderName = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Manager");
                     break;
-      case FilePath.User:
-                    folderName = Path.Combine(_hostEnvironment.WebRootPath, "Images", "User");
+      case FilePath.System:
+                    folderName = Path.Combine(_hostEnvironment.WebRootPath, "Images", "System");
                     break;
      
             }
@@ -54,17 +54,17 @@ namespace Ocean_Home.Helper
                 }
                 switch (filePath)
                 {
-                    case FilePath.Course:
-                        folderPath = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Course");
+                    case FilePath.Project:
+                        folderPath = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Project");
                         break;
                      case FilePath.Slider:
                         folderPath = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Slider");
                         break;
-                      case FilePath.Instructor:
-                        folderPath = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Instructor");
+                      case FilePath.Manager:
+                        folderPath = Path.Combine(_hostEnvironment.WebRootPath, "Images", "Manager");
                         break;
-                    case FilePath.User:
-                        folderPath = Path.Combine(_hostEnvironment.WebRootPath, "Images", "User");
+                    case FilePath.System:
+                        folderPath = Path.Combine(_hostEnvironment.WebRootPath, "Images", "System");
                         break;
                    
                 }
@@ -79,14 +79,14 @@ namespace Ocean_Home.Helper
         {
             switch (filePath)
             {
-                case FilePath.Course:
-                    return "/Images/Course/";
+                case FilePath.Project:
+                    return "/Images/Project/";
                 case FilePath.Slider:
                     return "/Images/Slider/";
-                 case FilePath.Instructor:
-                    return "/Images/Instructor/";
-                 case FilePath.User:
-                    return "/Images/User/";
+                 case FilePath.Manager:
+                    return "/Images/Manager/";
+                 case FilePath.System:
+                    return "/Images/System/";
                
                 default:
                     return null;

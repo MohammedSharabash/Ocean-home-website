@@ -91,7 +91,7 @@ namespace Education
            });
             services.AddScoped(typeof(IGeneric<>), typeof(GenericService<>));
             services.AddScoped(typeof(ICRUD<>), typeof(CRUDSerivce<>));
-            services.AddScoped<IUserCourse, UserCourseService>();
+            services.AddScoped<IUserProject, UserProjectService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -4221,7 +4221,8 @@ i.icon {
 }
 
 .wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid > li {
-    margin-bottom: 35px
+    margin-bottom: 35px;
+    margin-top: 75px;
 }
 
 .entry-content .twitter-share-button, .fb_like, .twitter-share-button, .wpb_accordion .wpb_content_element, .wpb_googleplus, .wpb_pinterest, .wpb_tab .wpb_content_element {

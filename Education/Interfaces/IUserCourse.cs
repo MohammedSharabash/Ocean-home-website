@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Ocean_Home.Interfaces
 {
-    public interface IUserCourse
+    public interface IUserProject
     {
-        //IEnumerable<UserCourse> GetUserCourse(Expression<Func<UserCourse,bool>> expression);
-        //IEnumerable<UserCourse> GetAllUserCourse();
+        //IEnumerable<UserProject> GetUserProject(Expression<Func<UserProject,bool>> expression);
+        //IEnumerable<UserProject> GetAllUserProject();
     }
 }

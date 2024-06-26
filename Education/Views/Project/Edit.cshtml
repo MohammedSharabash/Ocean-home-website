@@ -1,0 +1,104 @@
+﻿@model Ocean_Home.Models.Domain.Project
+@{
+    ViewBag.Title = "تعديل " + Model.Name;
+    var Departments = ViewBag.Departments as SelectList;
+}
+
+<h1 class="text-center mb-30">@ViewBag.Title</h1>
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+@using (Html.BeginForm("Edit", "Project", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(d => d.CreatedOn)
+    @Html.HiddenFor(d => d.DeletedOn)
+    @Html.HiddenFor(d => d.Id)
+    @Html.HiddenFor(d => d.IsDeleted)
+    @Html.HiddenFor(d => d.IsModified)
+    @Html.HiddenFor(d => d.ModifiedOn)
+    @Html.AntiForgeryToken()
+    <div class="row" style="margin:10px;">
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">اسم المشروع :</label>
+                <div class="col-sm-7">
+                    <input asp-for="Name" type="text" required id="Name" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">تفاصيل المشروع :</label>
+                <div class="col-sm-7">
+                    <textarea asp-for="Description" required id="DescriptionAr" class="form-control valid" rows="7"> 
+                                                                               </textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-10">
+            <div class="form-group">
+                <label for="DepartmentId" class="col-sm-5 control-label required"> قسم المشروع : </label>
+                <div class="col-sm-7">
+                    @Html.DropDownListFor(model => model.DepartmentId, Departments, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="ScopeOfWork" class="col-sm-5 control-label required">ScopeOfWork :</label>
+                <div class="col-sm-7">
+                    <input asp-for="ScopeOfWork" type="text" id="ScopeOfWork" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="ConsultantAndDesigner" class="col-sm-5 control-label required">ConsultantAndDesigner :</label>
+                <div class="col-sm-7">
+                    <input asp-for="ConsultantAndDesigner" type="text" id="ConsultantAndDesigner" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Location" class="col-sm-5 control-label required">Location :</label>
+                <div class="col-sm-7">
+                    <input asp-for="Location" type="text" id="Location" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Status" class="col-sm-5 control-label required">Status :</label>
+                <div class="col-sm-7">
+                    <input asp-for="Status" type="text" required id="Status" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Sort" class="col-sm-5 control-label required">الترتيب:</label>
+                <div class="col-sm-7">
+                    <input type="number" asp-for="Sort" name="Sort" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row" style="margin:10px;">
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required"></label>
+                <div class="col-sm-7">
+                    <button style="text-align:center !important" type="submit" class="btn btn-success">تعديل</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+}

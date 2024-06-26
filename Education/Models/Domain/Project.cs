@@ -14,10 +14,10 @@ namespace Ocean_Home.Models.Domain
         [ForeignKey("DepartmentId")]
         public virtual ProjectsDepartment Department { get; set; }
         public int Sort { get; set; }
-        public string ScopeOfWork { get; set; }
-        public string ConsultantAndDesigner { get; set; }
-        public string Location { get; set; }
-        public string Status { get; set; }
+        public string? ScopeOfWork { get; set; }
+        public string? ConsultantAndDesigner { get; set; }
+        public string? Location { get; set; }
+        public string? Status { get; set; }
         public virtual ICollection<ProjectImage> Images { get; set; }
     }
 }

@@ -10,22 +10,22 @@ using System.Threading.Tasks;
 
 namespace Ocean_Home.Services
 {
-    public class UserCourseService : IUserCourse
+    public class UserProjectService : IUserProject
     {
         private readonly AppDbContext _context;
-        public UserCourseService(AppDbContext context)
+        public UserProjectService(AppDbContext context)
         {
             _context = context;
         }
 
-        //public IEnumerable<UserCourse> GetAllUserCourse()
+        //public IEnumerable<UserProject> GetAllUserProject()
         //{
-        //    return _context.UserCourses.Include(x => x.Course).Include(x => x.User).ToList();
+        //    return _context.UserProjects.Include(x => x.Project).Include(x => x.User).ToList();
         //}
 
-        //public IEnumerable<UserCourse> GetUserCourse(Expression<Func<UserCourse, bool>> expression)
+        //public IEnumerable<UserProject> GetUserProject(Expression<Func<UserProject, bool>> expression)
         //{
-        //    return _context.UserCourses.Where(expression).Include(x => x.Course).Include(x => x.User).ToList();
+        //    return _context.UserProjects.Where(expression).Include(x => x.Project).Include(x => x.User).ToList();
         //}
     }
 }

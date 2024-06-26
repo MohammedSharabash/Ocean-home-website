@@ -1,0 +1,105 @@
+﻿@model Ocean_Home.Models.Domain.ContactUS
+@{
+    ViewBag.Title = "بيانات التواصل";
+}
+
+<h1 class="text-center mb-30">@ViewBag.Title</h1>
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+@using (Html.BeginForm("Edit", "ContactUs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(d => d.CreatedOn)
+    @Html.HiddenFor(d => d.DeletedOn)
+    @Html.HiddenFor(d => d.Id)
+    @Html.HiddenFor(d => d.IsDeleted)
+    @Html.HiddenFor(d => d.IsModified)
+    @Html.HiddenFor(d => d.Logo)
+    @Html.HiddenFor(d => d.ModifiedOn)
+    @Html.AntiForgeryToken()
+    <div class="row" style="margin:10px;">
+
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Location" class="col-sm-5 control-label required">العنوان  : </label>
+                <div class="col-sm-7">
+                    <input asp-for="Location" type="text" id="Location" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="MobilePhones" class="col-sm-5 control-label required">ارقام التواصل  : </label>
+                <div class="col-sm-7">
+                    <input asp-for="MobilePhones" type="text" id="MobilePhones" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="CallDirectly_Phone" class="col-sm-5 control-label required">رقم الهاتف للاتصال المباشر  : </label>
+                <div class="col-sm-7">
+                    <input asp-for="CallDirectly_Phone" type="text" id="CallDirectly_Phone" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="WorkHours" class="col-sm-5 control-label required">اوقات العمل  : </label>
+                <div class="col-sm-7">
+                    <input asp-for="WorkHours" type="text" id="WorkHours" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Instagram" class="col-sm-5 control-label required">لينك الانستغرام   : </label>
+                <div class="col-sm-7">
+                    <input asp-for="Instagram" type="text" id="Instagram" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Tiktok" class="col-sm-5 control-label required">لينك Tiktok   : </label>
+                <div class="col-sm-7">
+                    <input asp-for="Tiktok" type="text" id="Tiktok" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        @if (Model.Logo != null)
+        {
+            <div class="col-lg-6  mb-10">
+                <div class="form-group">
+                    <label for="Image" class="col-sm-5 control-label">اللوجو :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/System/@Model.Logo" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">تغير اللوجو :</label>
+                <div class="col-sm-7">
+                    <input name="Image" type="file" id="Image" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row" style="margin:10px;">
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required"></label>
+                <div class="col-sm-7">
+                    <button style="text-align:center !important" type="submit" class="btn btn-success">تعديل</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+}

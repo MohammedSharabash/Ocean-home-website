@@ -1,5 +1,8 @@
-﻿@{
+﻿@model Ocean_Home.Models.ViewModel.IndexVm
+@{
     Layout = null;
+    var manager = Model.Managers.FirstOrDefault(x => x.jobTitle == Ocean_Home.Models.Enums.JobTitle.Manager);
+    var ManagingPartner = Model.Managers.FirstOrDefault(x => x.jobTitle == Ocean_Home.Models.Enums.JobTitle.ManagingPartner);
 }
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#" class="no-js">
@@ -85,7 +88,7 @@
                         "@@id": "/#organizationLogo"
                     },
                     "sameAs": [
-                        "https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1",
+                        "@Model.contact.Tiktok",
                         "https://instagram.com/backcombined?igshid=YmMyMTA2M2Y=",
                     ],
                     "contactPoint": {
@@ -1161,6 +1164,18 @@
         body.custom-background {
             background-color: #3f3e3e;
         }
+
+        .newservice {
+            background: none;
+            padding-top: 10px;
+        }
+
+        .service-newbox {
+            padding: 10px 5px;
+            box-shadow: #00000040 0px 0px 19px 0px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
     </style>
     <meta name="generator" content="" />
     <link rel="icon" href="~/Content/images/oshn home logo.png" sizes="32x32" />
@@ -1791,11 +1806,11 @@
                     <div class="menu-footer right-boxed">
                         <div class="social-list">
 
-                            <a target="_blank" href="https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1" class="icon ion-social-tiktok"></a>
+                            <a target="_blank" href="@Model.contact.Tiktok" class="icon ion-social-tiktok"></a>
                             <!-- Font Awesome for Instagram -->
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                            <a target="_blank" class="fa fa-instagram" href="https://www.instagram.com/ocean__home?igsh=MWhqdTdnZG03MTNzdA%3D%3D&utm_source=qr"></a>
+                            <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
 
                         </div>
 
@@ -1813,24 +1828,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>   Building Reputation
+                    </button>
 
 
                     <a class="brand" href="">
-
                         <img alt="" src="Content/images/oshn home logo.png">
                         <div class="brand-info">
                             <div class="brand-name"></div>
                             <div class="brand-text"></div>
                         </div>
-
                     </a>
                     <!-- Font Awesome for Instagram -->
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                     <div class="social-list hidden-xs">
-                        <a target="_blank" class="fa fa-instagram" href="https://www.instagram.com/ocean__home?igsh=MWhqdTdnZG03MTNzdA%3D%3D&utm_source=qr"></a>
-                        <a target="_blank" href="https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1" class="fab fa-tiktok"></a>
+                        <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
+                        <a target="_blank" href="@Model.contact.Tiktok" class="fab fa-tiktok"></a>
                     </div>
                 </header>
 
@@ -1843,76 +1856,27 @@
                                     <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:transparent;padding:0;">
                                         <rs-module id="rev_slider_1_1" style="display:none;" data-version="6.1.5">
                                             <rs-slides>
-                                                <rs-slide data-key="rs-1" data-title="Slide" data-thumb="~/Content/images/s2.jpeg" data-duration="3000ms" data-anim="ei:d;eo:d;s:1000;r:0;t:slideleft;sl:7;">
-                                                    <img fetchpriority="high" decoding="async" src="~/Content/images/s4.jpeg" title="slider 1" width="1920" height="800" data-lazyload="~/Content/images/s1.jpeg" data-bg="p:center top;" data-parallax="5" class="rev-slidebg" data-no-retina>
-                                                    <rs-layer id="slider-1-slide-1-layer-16"
-                                                              class="slider-title"
-                                                              data-type="text"
-                                                              data-rsp_ch="on"
-                                                              data-xy="xo:394px,361px,360px,218px;y:m;yo:17px,16px,20px,16px;"
-                                                              data-text="s:72,63,48,22;l:72,68,62,54;fw:600;"
-                                                              data-dim="w:auto,auto,auto,249.969px;"
-                                                              data-frame_0="x:-150px;tp:600;"
-                                                              data-frame_1="tp:600;e:Power2.easeInOut;st:700;sp:1500;sR:700;"
-                                                              data-frame_999="y:100%;tp:600;e:Power2.easeInOut;st:w;sp:1000;sR:800;"
-                                                              data-frame_999_mask="u:t;"
-                                                              style="z-index:12;font-family:'Poppins',sans-serif;">
-                                                        Building Reputation
-                                                    </rs-layer>
+                                                @foreach (var slider in Model.Sliders)
+                                                {
+                                                    <rs-slide data-key="rs-@slider.Sort" data-title="Slide" data-thumb="~/Images/Slider/@slider.ImageUrl" data-duration="3000ms" data-anim="ei:d;eo:d;s:1000;r:0;t:slideleft;sl:7;">
+                                                        <img fetchpriority="high" decoding="async" src="~/Images/Slider/@slider.ImageUrl" title="slider @slider.Sort" width="1920" height="800" data-lazyload="~/Images/Slider/@slider.ImageUrl" data-bg="p:center top;" data-parallax="5" class="rev-slidebg" data-no-retina>
+                                                        <rs-layer id="slider-1-slide-1-layer-16"
+                                                                  class="slider-title"
+                                                                  data-type="text"
+                                                                  data-rsp_ch="on"
+                                                                  data-xy="xo:394px,361px,360px,218px;y:m;yo:17px,16px,20px,16px;"
+                                                                  data-text="s:72,63,48,22;l:72,68,62,54;fw:600;"
+                                                                  data-dim="w:auto,auto,auto,249.969px;"
+                                                                  data-frame_0="x:-150px;tp:600;"
+                                                                  data-frame_1="tp:600;e:Power2.easeInOut;st:700;sp:1500;sR:700;"
+                                                                  data-frame_999="y:100%;tp:600;e:Power2.easeInOut;st:w;sp:1000;sR:800;"
+                                                                  data-frame_999_mask="u:t;"
+                                                                  style="z-index:12;font-family:'Poppins',sans-serif;">
+                                                            @slider.Content
+                                                        </rs-layer>
 
-                                                </rs-slide>
-                                                <rs-slide data-key="rs-94" data-title="Slide" data-thumb="~/Content/images/s2.jpeg" data-duration="3000ms" data-anim="ei:d;eo:d;s:1000;r:0;t:slideleft;sl:7;">
-                                                    <img decoding="async" src="~/Content/images/s2.jpeg" title="slider 2" width="1920" height="800" data-lazyload="~/Content/images/s2.jpeg" data-bg="p:center top;" data-parallax="5" class="rev-slidebg" data-no-retina>
-                                                    <rs-layer id="slider-1-slide-94-layer-16"
-                                                              class="slider-title"
-                                                              data-type="text"
-                                                              data-rsp_ch="on"
-                                                              data-xy="xo:394px,363px,358px,218px;y:m;yo:17px,21px,20px,14px;"
-                                                              data-text="s:72,63,48,22;l:72,68,62,54;fw:600;"
-                                                              data-dim="w:auto,auto,auto,331.15599999999995px;"
-                                                              data-frame_0="x:-150px;tp:600;"
-                                                              data-frame_1="tp:600;e:Power2.easeInOut;st:700;sp:1500;sR:700;"
-                                                              data-frame_999="y:100%;tp:600;e:Power2.easeInOut;st:w;sp:1000;sR:4800;"
-                                                              data-frame_999_mask="u:t;"
-                                                              style="z-index:14;font-family:'Poppins',sans-serif;">
-                                                        High-End Construction
-                                                    </rs-layer>
-
-                                                </rs-slide>
-                                                <rs-slide data-key="rs-95" data-title="Slide" data-thumb="~/Content/images/s3.jpeg" data-duration="3000ms" data-anim="ei:d;eo:d;s:1000;r:0;t:slideleft;sl:7;">
-                                                    <img decoding="async" src="~/Content/images/s3.jpeg" title="slider 3" width="1920" height="800" data-lazyload="~/Content/images/s4.jpeg" data-bg="p:center top;" data-parallax="5" class="rev-slidebg" data-no-retina>
-                                                    <rs-layer id="slider-1-slide-95-layer-16"
-                                                              class="slider-title"
-                                                              data-type="text"
-                                                              data-rsp_ch="on"
-                                                              data-xy="xo:394px,357px,360px,221px;y:m;yo:17px,22px,20px,16px;"
-                                                              data-text="s:72,63,48,22;l:72,68,62,54;fw:600;"
-                                                              data-frame_0="x:-150px;tp:600;"
-                                                              data-frame_1="tp:600;e:Power2.easeInOut;st:700;sp:1500;sR:700;"
-                                                              data-frame_999="y:100%;tp:600;e:Power2.easeInOut;st:w;sp:1000;sR:3800;"
-                                                              data-frame_999_mask="u:t;"
-                                                              style="z-index:12;font-family:'Poppins',sans-serif;">
-                                                        Customer Centric
-                                                    </rs-layer>
-
-                                                </rs-slide>
-                                                <rs-slide data-key="rs-96" data-title="Slide" data-thumb="~/Content/images/s4.jpeg" data-duration="3000ms" data-anim="ei:d;eo:d;s:1000;r:0;t:slideleft;sl:7;">
-                                                    <img loading="lazy" decoding="async" src="~/Content/images/s4.jpeg" title="slider 4" width="1920" height="800" data-lazyload="~/Content/images/s4.jpeg" data-bg="p:center top;" data-parallax="5" class="rev-slidebg" data-no-retina>
-                                                    <rs-layer id="slider-1-slide-96-layer-16"
-                                                              class="slider-title"
-                                                              data-type="text"
-                                                              data-rsp_ch="on"
-                                                              data-xy="xo:394px,360px,360px,220px;y:m;yo:17px,24px,18px,17px;"
-                                                              data-text="s:72,63,48,22;l:72,68,62,54;fw:600;"
-                                                              data-frame_0="x:-150px;tp:600;"
-                                                              data-frame_1="tp:600;e:Power2.easeInOut;st:700;sp:1500;sR:700;"
-                                                              data-frame_999="y:100%;tp:600;e:Power2.easeInOut;st:w;sp:1000;sR:4800;"
-                                                              data-frame_999_mask="u:t;"
-                                                              style="z-index:14;font-family:'Poppins',sans-serif;">
-                                                        Ensured Safety
-                                                    </rs-layer>
-
-                                                </rs-slide>
+                                                    </rs-slide>
+                                                }
                                             </rs-slides>
                                             <rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
                                         </rs-module>
@@ -2016,37 +1980,23 @@
                                                         نبذة عنا
                                                     </h2>
                                                     <div class="about_box" style=" text-align: right;">
-                                                        <p>شركة أوشن هوم للتشييد والبناء تأسست سنة (2017) واكتسبت الأفضلية والتميز بين الشركات وبشهادة العملاء ونزاهة التعامل مع الكل وثقتهم وجودة ما نقدم </p>
-                                                        <p>وكذلك تم تصنيف الشركة في بلدية الكويت تصنيف (ب) وتعمل على إدارة وتنفيذ مجموعة متنوعة من المشاريع الكبيرة والصغيرة بدءًا من البنايات التجارية والسكنية، وصولا إلى المشاريع الصناعية في مختلف مناطق الكويت تعتمد الشركة على فريق من الخبراء والمهندسين الماهرين، الذين يعملون على تحقيق أعلى معايير الجودة والأمان في جميع المشاريع التي تتولاها وقد تخصصت منذ انطلاقها في أعمال المقاولات المختلفة وكافة أعمال التجارة مثل</p>
 
-                                                        <div class="service2" dir="ltr" style="background:none;border-radius:5px; color:white; padding-top: 5px!important;">
+                                                        <p>@Model.aboutUS.Description</p>
+                                                        <div class="newservice" dir="ltr" @* style="background:none;border-radius:5px; color:white; padding-top: 5px!important;" *@>
                                                             <div class="container">
                                                                 <div class="row" dir="rtl">
-                                                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                                                                        <div @* class="service-box2" *@>
-                                                                            <h4 style="color:white;">أعمال الإنشاءات</h4>
+                                                                    @foreach (var item in Model.Specialties)
+                                                                    {
+                                                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6" @* style="background: aliceblue;" *@>
+                                                                            <i><img src="/Images/Slider/@item.ImageUrl" style="border-radius:5px;"></i>
+                                                                            <div class="service-newbox">
+                                                                                <h4 style="color:white">@item.Content</h4>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                                                                        <div @* class="service-box2" *@>
-                                                                            <h4 style="color:white;">أعمال التشطيبات</h4>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                                                                        <div @* class="service-box2" *@>
-                                                                            <h4 style="color:white;">الأعمال الكهربية</h4>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                                                                        <div @* class="service-box2" *@>
-                                                                            <h4 style="color:white;">أعمال السباكة</h4>
-                                                                        </div>
-                                                                    </div>
-
+                                                                    }
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <p style="  direction: rtl;   text-align: right;">وغيرها من الأعمال التي تتعلق بمجال المقاولات العامة ... </p>
                                                     </div>
                                                     <div class="experience-box">
                                                         <div class="experience-content">
@@ -2059,7 +2009,7 @@
                                                 <div class="col-md-5 col-md-offset-1">
                                                     <div class="dots-image">
 
-                                                        <img decoding="async" alt="" class="about-img img-responsive" src="~/Content/images/s5.jpeg">
+                                                        <img decoding="async" alt="" class="about-img img-responsive" src="~/Images/System/@Model.aboutUS.ImageUrl">
 
 
                                                         <div class="dots"></div>
@@ -2077,7 +2027,7 @@
                                                 <div class="quote-dots"></div>
                                                 <div class="quote-content">
                                                     <div class="quote-img-container">
-                                                        <img decoding="async" class="quote-img" src="~/content/images/3.jpg" alt="his image" />
+                                                        <img decoding="async" class="quote-img" src="~/Images/Manager/@manager.ImageUrl" alt="his image" />
                                                     </div>
 
                                                     <div class="quote-text">
@@ -2089,14 +2039,14 @@
                                                                 </g>
                                                             </svg>
                                                         </div>
-                                                        <div class="quote-inner-text">يمكنك كتابة اي نص هنا , هذا النص يمكن تغييره لاحقا </div>
+                                                        <div class="quote-inner-text">@manager.Description </div>
                                                         <div class="closing-quote">
                                                         </div>
                                                         <div class="quote-sayer">
-                                                            محمد محمد محمد
+                                                            @manager.Name
                                                         </div>
                                                         <div class="quote-sayer-position">
-                                                            مدير
+                                                            المدير
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2142,131 +2092,21 @@
 
                                         <div class="project-carousel owl-carousel">
 
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content/images/s2.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
+                                            @foreach (var project in Model.Projects)
+                                            {
+                                                <div class="project-item item-shadow ongoing   ">
+                                                    <img decoding="async" alt="" class="img-responsive"
+                                                         src="~/Images/Project/@project.Images.First().ImageUrl">
+                                                    <div class="project-hover">
+                                                        <div class="project-hover-content">
+                                                            <h3 class="project-title">@project.Name</h3>
+                                                            <p class="project-description">@project.Description </p>
+                                                        </div>
                                                     </div>
+                                                    <a href="/home/projectDetails?id=@project.Id"
+                                                       class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
                                                 </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
-
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content//images/s11.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
-                                                    </div>
-                                                </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
-
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content/images/s4.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
-                                                    </div>
-                                                </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
-
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content/images/s11.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
-                                                    </div>
-                                                </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
-
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content//images/s6.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
-                                                    </div>
-                                                </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
-
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content//images/s7.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
-                                                    </div>
-                                                </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
-
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content/images/s8.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
-                                                    </div>
-                                                </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
-
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content/images/s9.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
-                                                    </div>
-                                                </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
-
-
-                                            <div class="project-item item-shadow ongoing   ">
-                                                <img decoding="async" alt="" class="img-responsive"
-                                                     src="~/Content/images/s10.jpeg">
-                                                <div class="project-hover">
-                                                    <div class="project-hover-content">
-                                                        <h3 class="project-title">Ocean Home</h3>
-                                                        <p class="project-description">يمكنكم كتابة تفاصيل المشروع </p>
-                                                    </div>
-                                                </div>
-                                                <a href="/home/projectDetails"
-                                                   class="link-arrow">شاهد المشروع<i class="icon ion-ios-arrow-right"></i></a>
-                                            </div>
+                                            }
                                         </div>
                                     </section>
 
@@ -2292,7 +2132,23 @@
 
                                         </div>
                                     </div>
-                                    <div class="wpb_gallery wpb_content_element vc_clearfix  aos-zoom-in" id="affiliates"><div class="wpb_wrapper"><h2 class="wpb_heading wpb_gallery_heading">Our Affiliates</h2><div class="wpb_gallery_slides wpb_image_grid" data-interval="3"><ul class="wpb_image_grid_ul"><li class="isotope-item"><img loading="lazy" decoding="async" width="300" height="300" src="/wp-content/uploads/2022/05/wippro-300x300.png" class="attachment-medium" alt="" srcset="/wp-content/uploads/2022/05/wippro-300x300.png 300w, /wp-content/uploads/2022/05/wippro-1024x1024.png 1024w, /wp-content/uploads/2022/05/wippro-150x150.png 150w, /wp-content/uploads/2022/05/wippro-768x768.png 768w, /wp-content/uploads/2022/05/wippro-370x370.png 370w, /wp-content/uploads/2022/05/wippro-685x685.png 685w, /wp-content/uploads/2022/05/wippro.png 1080w" sizes="(max-width: 300px) 100vw, 300px" /></li><li class="isotope-item"><img loading="lazy" decoding="async" width="300" height="300" src="/wp-content/uploads/2022/05/keim-300x300.png" class="attachment-medium" alt="" srcset="/wp-content/uploads/2022/05/keim-300x300.png 300w, /wp-content/uploads/2022/05/keim-1024x1024.png 1024w, /wp-content/uploads/2022/05/keim-150x150.png 150w, /wp-content/uploads/2022/05/keim-768x768.png 768w, /wp-content/uploads/2022/05/keim-370x370.png 370w, /wp-content/uploads/2022/05/keim-685x685.png 685w, /wp-content/uploads/2022/05/keim.png 1080w" sizes="(max-width: 300px) 100vw, 300px" /></li><li class="isotope-item"><img loading="lazy" decoding="async" width="300" height="288" src="/wp-content/uploads/2022/05/hormann-300x288.png" class="attachment-medium" alt="" srcset="/wp-content/uploads/2022/05/hormann-300x288.png 300w, /wp-content/uploads/2022/05/hormann-1024x983.png 1024w, /wp-content/uploads/2022/05/hormann-768x737.png 768w, /wp-content/uploads/2022/05/hormann.png 1125w" sizes="(max-width: 300px) 100vw, 300px" /></li><li class="isotope-item"><img loading="lazy" decoding="async" width="300" height="300" src="/wp-content/uploads/2022/05/cipriani-300x300.png" class="attachment-medium" alt="" srcset="/wp-content/uploads/2022/05/cipriani-300x300.png 300w, /wp-content/uploads/2022/05/cipriani-1024x1024.png 1024w, /wp-content/uploads/2022/05/cipriani-150x150.png 150w, /wp-content/uploads/2022/05/cipriani-768x768.png 768w, /wp-content/uploads/2022/05/cipriani-370x370.png 370w, /wp-content/uploads/2022/05/cipriani-685x685.png 685w, /wp-content/uploads/2022/05/cipriani.png 1080w" sizes="(max-width: 300px) 100vw, 300px" /></li></ul></div></div></div>
+                                    <div class="wpb_gallery wpb_content_element vc_clearfix  aos-zoom-in" id="affiliates">
+                                        <div class="wpb_wrapper">
+                                            <h2 class="wpb_heading wpb_gallery_heading">Our Affiliates</h2>
+                                            <div class="wpb_gallery_slides wpb_image_grid" data-interval="3">
+                                                <ul class="wpb_image_grid_ul">
+                                                    @foreach (var OurAffiliate in Model.OurAffiliates)
+                                                    {
+                                                        <li class="isotope-item">
+                                                            <img loading="lazy" decoding="async" width="300" height="300"
+                                                                 src="~/Images/System/@OurAffiliate.ImageUrl_300x300"
+                                                                 class="attachment-medium" alt="" srcset="/Images/System/@OurAffiliate.ImageUrl_300x300 300w, /Images/System/@OurAffiliate.ImageUrl_1024x1024 1024w, /Images/System/@OurAffiliate.ImageUrl_150x150 150w, /Images/System/@OurAffiliate.ImageUrl_768x768 768w, /Images/System/@OurAffiliate.ImageUrl_370x370 370w, /Images/System/@OurAffiliate.ImageUrl_685x685 685w, /Images/System/@OurAffiliate.ImageUrl_1080 1080w" sizes="(max-width: 300px) 100vw, 300px" />
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2329,17 +2185,13 @@
                                                             <p class="contact-address text-muted"><strong></strong></p>
                                                             @* <p class="contact-row">Location: Mirqab, Shyama’a Tower, 4th floor</p> *@
                                                             <p class="contact-row">
-                                                                Location: مدينه الكويت
-                                                                <br />
-                                                                , الكويت قبلة , شارع فهد السالم
-                                                                <br />
-                                                                أبراج سنام الدور 10
+                                                                Location: @Model.contact.Location
                                                                 <a href="https://goo.gl/maps/aSLd27hw4gX34HeH7">
                                                                     <i class="fa fa-location-arrow custom-icon" aria-hidden="true"></i>
                                                                 </a>
                                                             </p>
                                                             <p class="contact-row">
-                                                                Mobile Phone: 22059990 - 50647788 - 50109529
+                                                                Mobile Phone: @Model.contact.MobilePhones
                                                             </p>
                                                             @* <p class="contact-row">Telephone: +965 2225 1296</p>
                                                             <p class="contact-row">Fax: +965 2225 1297</p>
@@ -2351,10 +2203,10 @@
                                                             <p class="contact-top">
                                                                 <strong class="text-muted">Call directly:</strong>
                                                             </p>
-                                                            <p class="phone-lg ">22059990</p>
+                                                            <p class="phone-lg ">@Model.contact.CallDirectly_Phone</p>
                                                             <p class="text-muted">
                                                                 <strong class="">Work Hours</strong><br>
-                                                                Week Days: 08:30 – 16:30 Friday: Closed Saturday: 9:00 - 14:00
+                                                                Week Days: @Model.contact.WorkHours
                                                             </p>
                                                             <div class="text-muted">
                                                                 <strong class="text-dark"></strong><br>
@@ -2406,7 +2258,7 @@
                     /* <![CDATA[ */
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* ]]> */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* ]]> */
                 </script>
                 <script type="text/javascript" src="~/js/main.js" id="bauhaus-main-js"></script>
                 <script type="text/javascript" src="~/js/animsition.min.js" id="animsition-js"></script>
@@ -2471,10 +2323,10 @@
                 <div class="social-list">
 
 
-                <a target="_blank" class="fa fa-instagram" href="https://www.instagram.com/ocean__home?igsh=MWhqdTdnZG03MTNzdA%3D%3D&utm_source=qr"></a>
+                <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
 
 
-                <a target="_blank" href="https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1"
+                <a target="_blank" href="@Model.contact.Tiktok"
                 class="icon ion-social-tiktok"></a>
 
                 </div>

@@ -1,12 +1,11 @@
-﻿@model Ocean_Home.Models.Domain.Project
+﻿@model Ocean_Home.Models.Domain.Specialty
 @{
-    ViewBag.Title = "تعديل " + Model.Name;
-    var Instructors = ViewBag.Instructors as SelectList;
+    ViewBag.Title = "تعديل ";
 }
 
 <h1 class="text-center mb-30">@ViewBag.Title</h1>
 @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-@using (Html.BeginForm("Edit", "Course", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Specialty", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.HiddenFor(d => d.CreatedOn)
     @Html.HiddenFor(d => d.DeletedOn)
@@ -14,38 +13,41 @@
     @Html.HiddenFor(d => d.IsDeleted)
     @Html.HiddenFor(d => d.IsModified)
     @Html.HiddenFor(d => d.ModifiedOn)
+    @Html.HiddenFor(d => d.ImageUrl)
     @Html.AntiForgeryToken()
     <div class="row" style="margin:10px;">
-        
-
         <div class="col-lg-6 mb-10">
             <div class="form-group">
-                <label for="NameEn" class="col-sm-5 control-label required">اسم الدورة التدريبية بالانجليزى:</label>
+                <label for="Content" class="col-sm-5 control-label required">عنوان التخصص : </label>
                 <div class="col-sm-7">
-                    <input asp-for="Name" type="text" required id="Name" class="form-control valid" />
+                    <input asp-for="Content" type="text" id="Content" required class="form-control valid" />
                 </div>
             </div>
         </div>
+
+
+        @if (Model.ImageUrl != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="Image" class="col-sm-5 control-label">صوره التخصص:</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/Slider/@Model.ImageUrl" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
         <div class="col-lg-6 mb-10">
             <div class="form-group">
-                <label for="NameEn" class="col-sm-5 control-label required">تفاصيل الدورة التدريبية بالانجليزى:</label>
+                <label for="NameEn" class="col-sm-5 control-label required">تغير صورة التخصص:</label>
                 <div class="col-sm-7">
-                    <textarea asp-for="Description" required id="DescriptionAr" class="form-control valid" rows="7"> 
-                                                       </textarea>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-10">
-            <div class="form-group">
-                <label for="InstructorId" class="col-sm-5 control-label required"> المحاضر : </label>
-                <div class="col-sm-7">
-                    @Html.DropDownListFor(model => model.DepartmentId, Instructors, new { @class = "form-control" })
+                    <input name="Image" type="file" id="Image" class="form-control valid" />
                 </div>
             </div>
         </div>
 
-
-       
         <div class="col-lg-6 mb-10">
             <div class="form-group">
                 <label for="Sort" class="col-sm-5 control-label required">الترتيب:</label>

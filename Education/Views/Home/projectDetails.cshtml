@@ -1,5 +1,7 @@
-﻿@{
+﻿@model Ocean_Home.Models.ViewModel.IndexVm
+@{
     Layout = null;
+    var project = Model.Projects.First();
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +10,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Portfolio Details Back Combined</title>
+    <title>Ocean Home | Project Details</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -67,8 +69,8 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
             <div class="social-list hidden-xs">
-                <a target="_blank" class="fa fa-instagram m-2" href="https://www.instagram.com/ocean__home?igsh=MWhqdTdnZG03MTNzdA%3D%3D&utm_source=qr"></a>
-                <a target="_blank" href="https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1" class="fab fa-tiktok m-2"></a>
+                <a target="_blank" class="fa fa-instagram m-2" href="@Model.contact.Instagram"></a>
+                <a target="_blank" href="@Model.contact.Tiktok" class="fab fa-tiktok m-2"></a>
             </div>
         </div>
     </nav>
@@ -82,33 +84,13 @@
 
                             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 swiper-initialized swiper-horizontal swiper-backface-hidden">
                                 <div class="swiper-wrapper" id="swiper-wrapper-dc2f95c10ead5f83e" aria-live="polite">
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s3.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="1" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s5.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="2" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s6.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="3" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s7.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="4" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s8.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="5" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s9.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="6" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s10.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="7" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s5.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="8" style="width: 1366px; margin-right: 10px;">
-                                        <img src="~/Content/images/s9.jpeg" alt="">
-                                    </div>
+                                    @foreach (var item in Model.ProjectImages)
+                                    {
+                                        <div class="swiper-slide swiper-slide-visible" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 1366px; margin-right: 10px;">
+                                            <img src="~/Images/Project/@item.ImageUrl" alt="">
+                                        </div>
+                                    }
+
 
                                 </div>
                                 <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-dc2f95c10ead5f83e"></div>
@@ -120,37 +102,13 @@
 
                             <div id="gallery-swiper" class="swiper mySwiper swiper-initialized swiper-horizontal swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
                                 <div class="swiper-wrapper" id="swiper-wrapper-d78392757322f119" aria-live="polite" style="transform: translate3d(-2023px, 0px, 0px); transition-duration: 0ms;">
+                                    @foreach (var item in Model.ProjectImages)
+                                    {
+                                        <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 334px; margin-right: 10px;">
+                                            <img src="~/Images/Project/@item.ImageUrl" alt="">
+                                        </div>
+                                    }
 
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s11.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="1" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s2.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="2" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s9.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="3" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s8.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="4" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s6.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="5" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s5.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="6" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s1.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="7" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s3.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="8" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s2.jpeg" alt="">
-                                    </div>
-                                    <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="9" style="width: 334px; margin-right: 10px;">
-                                        <img src="~/Content/images/s5.jpeg" alt="">
-                                    </div>
                                 </div>
                                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                             </div>
@@ -166,19 +124,19 @@
                                     </div>
                                     <div class="col-md-10 left">
                                         <h3 class="left">
-                                            16 Tower
+                                            @project.Name
                                         </h3>
                                     </div>
                                 </div>
 
                                 <ul>
-                                    <li><strong>Scope of Work</strong> - Turn key</li>
+                                    <li><strong>Scope of Work</strong> - @project.ScopeOfWork</li>
 
-                                    <li><strong>Consultant & Designer</strong> - Esas Architect</li>
+                                    <li><strong>Consultant & Designer</strong> - @project.ConsultantAndDesigner</li>
 
-                                    <li><strong>Loaction</strong> - Bneid Al-gar</li>
+                                    <li><strong>Loaction</strong> - @project.Location</li>
 
-                                    <li><strong>Status</strong> - Handed Over</li>
+                                    <li><strong>Status</strong> - @project.Status</li>
 
                                 </ul>
                             </div>

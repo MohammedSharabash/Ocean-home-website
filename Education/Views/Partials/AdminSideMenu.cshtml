@@ -57,8 +57,8 @@
                     <i class="fa fa-user"></i> <span>أقسام العاملين </span>
                 </a>
             </li>
-            <li class="treeview  @(Context.Request.Path.ToString().ToLower().Contains("project") ? "active" : "")">
-                <a href="@Url.Action("Index", "Project")">
+            <li class="treeview  @(Context.Request.Path.ToString().ToLower().Contains("employee") ? "active" : "")">
+                <a href="@Url.Action("Index", "Employee")">
                     <i class="fa fa-book"></i> <span>العاملين</span>
                 </a>
             </li>
@@ -78,6 +78,11 @@
             <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("aboutUS") ? "active" : "")">
                 <a href="@Url.Action("Index", "AboutUS")">
                     <i class="fa fa-newspaper"></i> <span>من نحن</span>
+                </a>
+            </li>
+            <li class="treeview @(Context.Request.Path.ToString().ToLower().Contains("specialty") ? "active" : "")">
+                <a href="@Url.Action("Index", "Specialty")">
+                    <i class="fa fa-newspaper"></i> <span> التخصصات</span>
                 </a>
             </li>
 

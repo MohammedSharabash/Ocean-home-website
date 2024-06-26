@@ -9,7 +9,7 @@ namespace Ocean_Home.Models.Enums
     {
         Success,
         TheModelIsInvalid,
-        ThisCourseNotExistOrDeleted,
+        ThisProjectNotExistOrDeleted,
         SomeThingWentwrong,
         YouForgetTOEnterTheTransferImage,
         TheUserNotExistOrDeleted,

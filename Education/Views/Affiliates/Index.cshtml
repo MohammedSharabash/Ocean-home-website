@@ -1,12 +1,10 @@
-﻿@model IEnumerable<Ocean_Home.Models.Domain.Project>
+﻿@model IEnumerable<Ocean_Home.Models.Domain.OurAffiliate>
 @{
-    ViewData["Title"] = "المشاريع";
-    var Instructors = ViewBag.Instructors as SelectList;
-    var AllInstructors = ViewBag.AllInstructors as List<Ocean_Home.Models.Domain.ProjectsDepartment>;
+    ViewData["Title"] = "Our Affiliates";
 }
 <div class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title"><i class="fa fa-fw fa-reply"></i> المشاريع</h3>
+        <h3 class="panel-title"><i class="fa fa-fw fa-reply"></i> Our Affiliates</h3>
     </div>
     <div class="panel-body">
         <div id="accordion" class="panel-group" aria-multiselectable="true" role="tablist">
@@ -26,107 +24,84 @@
 
                 <div class="panel-heading collapsed" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <h4 class="panel-title">
-                        <a class="pointer"><i class="fa fa-fw fa-plus"></i> إضافة المشاريع</a>
+                        <a class="pointer"><i class="fa fa-fw fa-plus"></i> إضافة </a>
                     </h4>
                 </div>
 
 
                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
-
+                        <h3>يرجي إضافة الصورة بجميع المقاسات</h3>
                         @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-                        @using (Html.BeginForm("Create", "Course", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        @using (Html.BeginForm("Create", "Affiliates", FormMethod.Post, new { enctype = "multipart/form-data" }))
                         {
                             @Html.AntiForgeryToken()
                             <div class="row" style="margin:10px;">
+
                                 <div class="col-lg-6 mb-10">
                                     <div class="form-group">
-                                        <label for="NameAr" class="col-sm-5 control-label required">اسم المشروع بالعربى: </label>
+                                        <label for="ImageUrl_150x150" class="col-sm-5 control-label required">  150x150 صوره :</label>
                                         <div class="col-sm-7">
-                                            <input name="NameAr" type="text" id="NameAr" required class="form-control valid" />
+                                            <input type="file" id="ImageUrl_150x150" required name="ImageUrl_150x150" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 mb-10">
                                     <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">اسم المشروع بالانجليزى:</label>
+                                        <label for="ImageUrl_300x300" class="col-sm-5 control-label required">  300x300 صوره :</label>
                                         <div class="col-sm-7">
-                                            <input name="Name" type="text" required id="Name" class="form-control valid" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">تفاصيل المشروع بالعربى:</label>
-                                        <div class="col-sm-7">
-                                            <textarea name="DescriptionAr" required id="DescriptionAr" class="form-control valid" rows="7"> 
-                                                                                                           </textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">تفاصيل المشروع بالانجليزى:</label>
-                                        <div class="col-sm-7">
-                                            <textarea name="Description" required id="DescriptionAr" class="form-control valid" rows="7"> 
-                                                                                                           </textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 mb-10">
-                                    <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">محاضر المشروع :</label>
-                                        <div class="col-sm-7">
-                                            <select id="instructorSelect" name="InstructorId" class="form-control">
-                                                @foreach (var listItem in Instructors)
-                                                {
-                                                    <option value="@listItem.Value">@listItem.Text</option>
-                                                }
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="NameAr" class="col-sm-5 control-label required">سعر المشروع: </label>
-                                        <div class="col-sm-7">
-                                            <div class="input-group">
-
-                                                <input name="Price" type="number" id="Price" required class="form-control valid" />
-                                                <span class="input-group-addon">دولار</span>
-                                            </div>
+                                            <input type="file" id="ImageUrl_300x300" required name="ImageUrl_300x300" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 mb-10">
                                     <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">السعر بعد الخصم (اختياري):</label>
+                                        <label for="ImageUrl_370x370" class="col-sm-5 control-label required">  370x370 صوره :</label>
                                         <div class="col-sm-7">
-                                            <div class="input-group">
-                                                <input name="OfferPrice" type="number" id="OfferPrice" class="form-control valid" />
-                                                <span class="input-group-addon">دولار</span>
-                                            </div>
+                                            <input type="file" id="ImageUrl_370x370" required name="ImageUrl_370x370" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-lg-6 mb-10">
                                     <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">صورة المشروع:</label>
+                                        <label for="ImageUrl_685x685" class="col-sm-5 control-label required">  685x685 صوره :</label>
                                         <div class="col-sm-7">
-                                            <input type="file" id="ImageFile" name="ImageFile" class="form-control" />
+                                            <input type="file" id="ImageUrl_685x685" required name="ImageUrl_685x685" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-lg-6 mb-10">
                                     <div class="form-group">
-                                        <label for="Sort" class="col-sm-5 control-label required">الترتيب:</label>
+                                        <label for="ImageUrl_768x768" class="col-sm-5 control-label required">  768x768 صوره :</label>
                                         <div class="col-sm-7">
-                                            <input type="number" id="Sort" name="Sort" required class="form-control valid" />
+                                            <input type="file" id="ImageUrl_768x768" required name="ImageUrl_768x768" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-lg-6 mb-10">
+                                    <div class="form-group">
+                                        <label for="ImageUrl_1024x1024" class="col-sm-5 control-label required">  1024x1024 صوره :</label>
+                                        <div class="col-sm-7">
+                                            <input type="file" id="ImageUrl_1024x1024" required name="ImageUrl_1024x1024" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 mb-10">
+                                    <div class="form-group">
+                                        <label for="ImageUrl_1080" class="col-sm-5 control-label required">  1080 صوره :</label>
+                                        <div class="col-sm-7">
+                                            <input type="file" id="ImageUrl_1080" required name="ImageUrl_1080" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                             <button type="submit" class="btn btn-success">إضافة</button>
                         }
@@ -137,20 +112,18 @@
         <div class="col-12 mb-10">
             @if (ViewBag.State == "D")
             {
-                <a href="@Url.Action("Index")" class="btn btn-success">المشاريع الحاليه</a>
+                <a href="@Url.Action("Index")" class="btn btn-success">Our Affiliates الحاليه</a>
             }
             else
             {
-                <a href="@Url.Action("Index", new { q = "deleted" })" class="btn btn-danger">المشاريع المحذوفه</a>
+                <a href="@Url.Action("Index", new { q = "deleted" })" class="btn btn-danger">Our Affiliates المحذوفين</a>
             }
         </div>
         <div class="table-responsive">
             <table id="table" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th style="text-align:center">الترتيب</th>
-                        <th style="text-align:center">اسم المشروع </th>
-                        <th style="text-align:center">المحاضر</th>
+                        <th style="text-align:center">الصورة</th>
                         <th style="text-align:center">الحالة </th>
                         <th style="text-align:center ">التحكم</th>
                     </tr>
@@ -159,24 +132,16 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>
-
-                                @item.Sort
-                            </td>
 
                             <td>
-                                @item.Name
-                            </td>
-                            <td>
-                                @AllInstructors.FirstOrDefault(x => x.Id == item.DepartmentId).Name<br />
-                                @*                                 @AllInstructors.FirstOrDefault(x => x.Id == item.InstructorId).Name
-                            *@                                @if (AllInstructors.FirstOrDefault(x => x.Id == item.DepartmentId).IsDeleted == true)
+                                @if (!string.IsNullOrEmpty(item.ImageUrl_1080))
                                 {
-                                    <span class="badge bg-red">محذوف</span>
+                                    <img src="@Url.Content(item.ImageUrl_1080 != null ? ("/Images/System/" + item.ImageUrl_1080) : "~/Content/assets/imgs/unnamed.jpg")" width="150" height="50" />
+
                                 }
                                 else
                                 {
-                                    <span class="badge bg-green">متاح</span>
+                                    <span>---</span>
                                 }
                             </td>
                             <td>
@@ -192,21 +157,17 @@
 
 
                             <td>
-                                <a asp-action="Edit" asp-controller="Course" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                                <a asp-action="Edit" asp-controller="Affiliates" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                 <span>|</span>
 
                                 @if (ViewBag.State != "D")
                                 {
-                                    <a onclick="Delete('Course/Delete?id=@item.Id')" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    <a onclick="Delete('Affiliates/Delete?id=@item.Id')" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                 }
                                 else
                                 {
-                                    <a onclick="Resotre('Course/Delete?id=@item.Id')" class="btn btn-default"><i class="fa fa-undo"></i></a>
+                                    <a onclick="Resotre('Affiliates/Delete?id=@item.Id')" class="btn btn-default"><i class="fa fa-undo"></i></a>
                                 }
-                                <span>|</span>
-                                <a asp-action="Index" asp-controller="courseUser" asp-route-CourseId="@item.Id" class="btn btn-info"><i class="fa fa-users"></i></a>
-                                <span>|</span>
-                                <a asp-action="Index" asp-controller="Video" asp-route-id="@item.Id" class="btn btn-success"><i class="fa fa-tv"></i></a>
                             </td>
                         </tr>
                     }
@@ -219,7 +180,7 @@
     function Delete(url) {
         swal({
             title: "هل متأكد؟",
-            text: "عند مسح هذا المشروع سوف يتم نقله إلى المشاريع المحذوفة",
+            text: "عند مسح هذا السلايدر سوف يتم نقله إلى Our Affiliates المحذوفين",
             icon: "warning",
             dangerMode: true
         }).then((willDelete) => {
@@ -243,7 +204,7 @@
     function Resotre(url) {
         swal({
             title: "هل متأكد؟",
-            text: "هل تريد استراجع هذا المشروع مرة أخرى",
+            text: "هل تريد استراجع العنصر مرة أخرى",
             icon: "success"
         }).then((willDelete) => {
             if (willDelete) {

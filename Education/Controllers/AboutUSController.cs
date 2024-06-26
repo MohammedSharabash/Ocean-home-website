@@ -61,12 +61,12 @@ namespace Ocean_Home.Controllers
             var file = HttpContext.Request.Form.Files.GetFile("Image");
             if (file != null)
             {
-                department.ImageUrl = await MediaControl.Upload(FilePath.Course, file, _webHostEnvironment);
+                department.ImageUrl = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
             }
             var file2 = HttpContext.Request.Form.Files.GetFile("Image2");
             if (file2 != null)
             {
-                department.CoverImageUrl = await MediaControl.Upload(FilePath.Course, file2, _webHostEnvironment);
+                department.CoverImageUrl = await MediaControl.Upload(FilePath.System, file2, _webHostEnvironment);
             }
 
             if (!await _AboutUS.Update(department))

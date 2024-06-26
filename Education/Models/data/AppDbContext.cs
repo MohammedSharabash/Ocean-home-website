@@ -23,6 +23,7 @@ namespace Ocean_Home.Models.data
         public DbSet<ContactUS> ContactUs { get; set; }
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Specialty> Specialtys { get; set; }
         public DbSet<AboutUS> AboutUs { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<ProjectsDepartment> ProjectsDepartments { get; set; }

@@ -7,9 +7,9 @@ namespace Ocean_Home.Models.Enums
 {
     public enum FilePath
     {
-        Course,
+        Project,
         Slider,
-        Instructor,
-        User,
+        Manager,
+        System,
     }
 }

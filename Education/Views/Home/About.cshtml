@@ -1,5 +1,10 @@
-﻿@{
+﻿@model Ocean_Home.Models.ViewModel.IndexVm
+@using Ocean_Home.Models.Domain
+@{
     Layout = null;
+    var Exist = Model.Managers.Exists(x => x.jobTitle == Ocean_Home.Models.Enums.JobTitle.ManagingPartner);
+    Manager ManagingPartner = new Manager();
+    if (Exist) ManagingPartner = Model.Managers.FirstOrDefault(x => x.jobTitle == Ocean_Home.Models.Enums.JobTitle.ManagingPartner);
 }
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#" class="no-js">
@@ -85,7 +90,7 @@
                         "@@id": "/#organizationLogo"
                     },
                     "sameAs": [
-                        "https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1",
+                        "@Model.contact.Tiktok",
                         "https://instagram.com/backcombined?igshid=YmMyMTA2M2Y=",
                     ],
                     "contactPoint": {
@@ -1816,9 +1821,9 @@
                             <!-- Font Awesome for Instagram -->
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                            <a target="_blank" class="fa fa-instagram" href="https://www.instagram.com/ocean__home?igsh=MWhqdTdnZG03MTNzdA%3D%3D&utm_source=qr"></a>
+                            <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
 
-                            <a target="_blank" href="https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1"
+                            <a target="_blank" href="@Model.contact.Tiktok"
                                class="icon ion-social-tiktok"></a>
 
                         </div>
@@ -1853,8 +1858,8 @@
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                     <div class="social-list hidden-xs">
-                        <a target="_blank" class="fa fa-instagram" href="https://www.instagram.com/ocean__home?igsh=MWhqdTdnZG03MTNzdA%3D%3D&utm_source=qr"></a>
-                        <a target="_blank" href="https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1" class="fab fa-tiktok"></a>
+                        <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
+                        <a target="_blank" href="@Model.contact.Tiktok" class="fab fa-tiktok"></a>
                     </div>
                 </header>
 
@@ -1868,7 +1873,7 @@
                                         <div class="wpb_single_image wpb_content_element vc_align_center">
 
                                             <figure class="wpb_wrapper vc_figure">
-                                                <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1238" height="500" src="~/Content/images/oshn home logo.png" class="vc_single_image-img attachment-full" alt="" decoding="async" srcset="~/Content/images/banner2.jpg 1238w, ~/Content/images/banner2.jpg 300w, ~/Content/images/banner2.jpg 1024w, ~/Content/images/banner2.jpg 768w" sizes="(max-width: 1238px) 100vw, 1238px"></div>
+                                                <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1238" height="500" src="~/Content/images/oshn home logo.png" class="vc_single_image-img attachment-full" alt="" decoding="async" srcset="/Images/System/@Model.aboutUS.CoverImageUrl 1238w, /Images/System/@Model.aboutUS.CoverImageUrl 300w, /Images/System/@Model.aboutUS.CoverImageUrl 1024w, /Images/System/@Model.aboutUS.CoverImageUrl 768w" sizes="(max-width: 1238px) 100vw, 1238px"></div>
                                             </figure>
                                         </div>
 
@@ -1885,7 +1890,7 @@
                                                     <div class="col-md-9">
                                                         <div class="text-display-1">
                                                             <p>
-                                                                رسالتنا هي تقديم أعلى مستويات الجودة والاحترافية في مجال البناء والتشييد في الكويت، من خلال فريق كويتي مميز يجمع بين الخبرة والكفاءة، وذلك من خلال توفير حلول مبتكرة وشاملة تلبي احتياجات العملاء وتفوق توقعاتهم، مع الالتزام بالجودة والمصداقية والاستدامة في جميع مشاريعنا .
+                                                                @Model.aboutUS.OurMessage
                                                             </p>
                                                         </div>
                                                     </div>
@@ -1907,8 +1912,7 @@
                                                     <div class="col-md-9">
                                                         <div class="text-display-1">
                                                             <p>
-                                                                رؤيتنا هي أن نصبح الشركة المقاولاتية الرائدة
-                                                                والموثوقة في مجال البناء من خلال تقديم حلول بناء مبتكرة وجودة عالية تلبي تطلعات عملائنا. وتساهم في تحسين جودة الحياة.
+                                                                @Model.aboutUS.OurVision
                                                             </p>
                                                             @* <ul class="left our-vision-list">
                                                             <li aria-level="1"><b>Customer-oriented</b></li>
@@ -1949,38 +1953,37 @@
                                                     <div class="col-md-9">
                                                         <div class="text-display-1">
                                                             <p>
-                                                                شركة أوشن هوم للتشييد والبناء تأسست سنة (2017) واكتسبت الأفضلية والتميز بين الشركات وبشهادة العملاء ونزاهة التعامل مع الكل وثقتهم وجودة ما نقدم
-                                                                وكذلك تم تصنيف الشركة في بلدية الكويت تصنيف (ب) وتعمل على إدارة وتنفيذ مجموعة متنوعة من المشاريع الكبيرة والصغيرة بدءًا من البنايات التجارية والسكنية، وصولا إلى المشاريع الصناعية في مختلف مناطق الكويت تعتمد الشركة على فريق من الخبراء والمهندسين الماهرين، الذين يعملون على تحقيق أعلى معايير الجودة والأمان في جميع المشاريع التي تتولاها وقد تخصصت منذ انطلاقها في أعمال المقاولات المختلفة وكافة أعمال التجارة مثل
-                                                                <ul class="left our-vision-list">
-                                                                    <li aria-level="1">
-                                                                        <b>
-                                                                            <h4>أعمال السباكة</h4>
-                                                                        </b>
-                                                                    </li>
+                                                                @Model.aboutUS.Description
+                                                                @* <ul class="left our-vision-list">
+                                                                <li aria-level="1">
+                                                                <b>
+                                                                <h4>أعمال السباكة</h4>
+                                                                </b>
+                                                                </li>
                                                                 </ul>
                                                                 <ul class="left our-vision-list">
-                                                                    <li aria-level="1">
-                                                                        <b>
-                                                                            <h4>الأعمال الكهربية</h4>
-                                                                        </b>
-                                                                    </li>
+                                                                <li aria-level="1">
+                                                                <b>
+                                                                <h4>الأعمال الكهربية</h4>
+                                                                </b>
+                                                                </li>
                                                                 </ul>
                                                                 <ul class="left our-vision-list">
-                                                                    <li aria-level="1">
-                                                                        <b>
-                                                                            <h4>أعمال التشطيبات</h4>
-                                                                        </b>
-                                                                    </li>
+                                                                <li aria-level="1">
+                                                                <b>
+                                                                <h4>أعمال التشطيبات</h4>
+                                                                </b>
+                                                                </li>
                                                                 </ul>
                                                                 <ul class="left our-vision-list">
-                                                                    <li aria-level="1">
-                                                                        <b>
-                                                                            <h4>أعمال الإنشاءات</h4>
-                                                                        </b>
-                                                                    </li>
-                                                                </ul>
+                                                                <li aria-level="1">
+                                                                <b>
+                                                                <h4>أعمال الإنشاءات</h4>
+                                                                </b>
+                                                                </li>
+                                                                </ul> *@
                                                             </p>
-                                                            <p>وغيرها من الأعمال التي تتعلق بمجال المقاولات العامة ...</p>
+                                                            @* <p>وغيرها من الأعمال التي تتعلق بمجال المقاولات العامة ...</p> *@
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1989,82 +1992,28 @@
 
 
 
-                                        <section class="section  " id="managing_partner">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">Our Managing Partner</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            <div class="col-team col-xs-6 col-md-4">
-                                                                <div class="team-profile">
-                                                                    <img alt="" src="~/Content/images/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
-                                                                    <div class="team-hover">
-                                                                        <div class="team-content">
-                                                                            <div class="team-name">
-                                                                                <h6>اسم المدير</h6>
-                                                                                <div class="team-spec">
-                                                                                    Managing Partner
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="team-social">
-                                                                                <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-team col-xs-6 col-md-4">
-                                                                <div class="add-new-team">
-                                                                    <div class="add-new-text">
-                                                                        <div class="inner">
-                                                                            تكتب هنا بيانات الشخص وتفاصيل الحياه المهنيه,
-                                                                            تكتب هنا بيانات الشخص وتفاصيل الحياه المهنيه,
-                                                                            تكتب هنا بيانات الشخص وتفاصيل الحياه المهنيه,
-                                                                            تكتب هنا بيانات الشخص وتفاصيل الحياه المهنيه,
-                                                                            تكتب هنا بيانات الشخص وتفاصيل الحياه المهنيه,
-                                                                            تكتب هنا بيانات الشخص وتفاصيل الحياه المهنيه,
-                                                                            تكتب هنا بيانات الشخص وتفاصيل الحياه المهنيه,
-                                                                            تكتب هنا بيانات الشخص وتفاصيل الحياه المهنيه,
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <form method="post" enctype="multipart/form-data">
-                                                                        <input class="bauhaus_upload_file" type="file">
-                                                                    </form>
-                                                                </div>
-
+                                        @if (Exist)
+                                        {
+                                            <section class="section  " id="managing_partner">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="section-info">
+                                                                <div class="title-hr"></div>
+                                                                <div class="info-title">Our Managing Partner</div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                        </section>
-                                        <section class="section  " id="team_about">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">MAIN OFFICE AND ENGINEERS</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 20; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
+                                                        <div class="col-md-9">
+                                                            <div class="row-team row">
+                                                                <div class="col-team col-xs-6 col-md-4">
                                                                     <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/3.jpg">
+                                                                        <img alt="" src="~/Content/images/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
                                                                         <div class="team-hover">
                                                                             <div class="team-content">
                                                                                 <div class="team-name">
-                                                                                    <h6>الاسم @i</h6>
+                                                                                    <h6>@ManagingPartner.Name</h6>
                                                                                     <div class="team-spec">
-                                                                                        المهنه
+                                                                                        Managing Partner
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="team-social">
@@ -2074,345 +2023,65 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
 
-
-                                        <section class="section  " id="team_about">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">OPERATION MANAGERS</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 3; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
-                                                                    <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/Marketing_Pic.jpg">
-                                                                        <div class="team-hover">
-                                                                            <div class="team-content">
-                                                                                <div class="team-name">
-                                                                                    <h6>ENG. Test @i</h6>
-                                                                                    <div class="team-spec">
-                                                                                        Operation Manager
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="team-social">
-                                                                                    <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                                </div>
+                                                                <div class="col-team col-xs-6 col-md-4">
+                                                                    <div class="add-new-team">
+                                                                        <div class="add-new-text">
+                                                                            <div class="inner">
+                                                                                @ManagingPartner.Description
                                                                             </div>
                                                                         </div>
+
+                                                                        <form method="post" enctype="multipart/form-data">
+                                                                            <input class="bauhaus_upload_file" type="file">
+                                                                        </form>
                                                                     </div>
+
                                                                 </div>
-                                                            }
-                                                            @*  <div class="col-team col-xs-6 col-md-3">
-                                                            <div class="add-new-team">
-                                                            <div class="add-new-text">
-                                                            <div class="inner">
-                                                            </div></div>
-                                                            <form method="post" enctype="multipart/form-data">
-                                                            <input class="bauhaus_upload_file" type="file">
-                                                            </form>
                                                             </div>
-                                                            </div> *@
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-                                        <section class="section  " id="team_about">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">PROJECT MANAGERS</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 6; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
-                                                                    <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/Certified-People-Manager-feature.jpg">                                         <div class="team-hover">
-                                                                            <div class="team-content">
-                                                                                <div class="team-name">
-                                                                                    <h6>ENG. Test @i</h6>
-                                                                                    <div class="team-spec">
-                                                                                        Project Manager
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="team-social">
-                                                                                    <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-
-                                        <section class="section  " id="team_about">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">PROJECT ENGINEERS</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 10; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
-                                                                    <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/modern.jpg">
-                                                                        <div class="team-hover">
-                                                                            <div class="team-content">
-                                                                                <div class="team-name">
-                                                                                    <h6>ENG. Test @i</h6>
-                                                                                    <div class="team-spec">
-                                                                                        Project Engineer
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="team-social">
-                                                                                    <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            }
-                                                            @* <div class="col-team col-xs-6 col-md-3">
-                                                            <div class="add-new-team">
-                                                            <div class="add-new-text">
-                                                            <div class="inner">
+                                            </section>
+                                        }
+                                        @foreach (var department in Model.JobsDepartments)
+                                        {
+                                            <section class="section  " id="team_about">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="section-info">
+                                                                <div class="title-hr"></div>
+                                                                <div class="info-title">@department.Name</div>
                                                             </div>
-
-
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="row-team row">
+                                                                @foreach (var employee in Model.Employees.Where(x => x.DepartmentId == department.Id).ToList())
+                                                                {
+                                                                    <div class="col-team col-xs-6 col-md-3">
+                                                                        <div class="team-profile">
+                                                                            <img alt="" src="~/Images/System/@employee.ImageUrl">
+                                                                            <div class="team-hover">
+                                                                                <div class="team-content">
+                                                                                    <div class="team-name">
+                                                                                        <h6>@employee.Name</h6>
+                                                                                        <div class="team-spec">
+                                                                                            @employee.JobTitle
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="team-social">
+                                                                                        <a href="" class="icon  icon-medium icon-apartment"></a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                }
                                                             </div>
-
-                                                            <form method="post" enctype="multipart/form-data">
-                                                            <input class="bauhaus_upload_file" type="file">
-                                                            </form>
-                                                            </div>
-
-                                                            </div> *@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </section>
-
-                                        <section class="section  " id="team_about">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">SITE ENGINEER</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 10; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
-                                                                    <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/modern.jpg">
-                                                                        <div class="team-hover">
-                                                                            <div class="team-content">
-                                                                                <div class="team-name">
-                                                                                    <h6>ENG. Test @i</h6>
-                                                                                    <div class="team-spec">
-                                                                                        Project Engineer
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="team-social">
-                                                                                    <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-
-
-                                        <section class="section  " id="team_about">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">SAFTY AND HEALTY</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 6; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
-                                                                    <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/qqqq.jpg">
-                                                                        <div class="team-hover">
-                                                                            <div class="team-content">
-                                                                                <div class="team-name">
-                                                                                    <h6>ENG. Test @i</h6>
-                                                                                    <div class="team-spec">
-                                                                                        Project Engineer
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="team-social">
-                                                                                    <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-
-                                        <section class="section  " id="team_about">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">SURVEYORS</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 15; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
-                                                                    <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/eeee.jpg">
-                                                                        <div class="team-hover">
-                                                                            <div class="team-content">
-                                                                                <div class="team-name">
-                                                                                    <h6>ENG. Test @i</h6>
-                                                                                    <div class="team-spec">
-                                                                                        Project Engineer
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="team-social">
-                                                                                    <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-                                        <section class="section  " id="team_about">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">FOREMAN</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 3; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
-                                                                    <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/2662564-business-boss-.jpg">
-                                                                        <div class="team-hover">
-                                                                            <div class="team-content">
-                                                                                <div class="team-name">
-                                                                                    <h6>ENG. Test @i</h6>
-                                                                                    <div class="team-spec">
-                                                                                        Project Engineer
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="team-social">
-                                                                                    <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-                                        <section class="section  " id="team_about1">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">GUARDS</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="row-team row">
-                                                            @for (int i = 0; i < 5; i++)
-                                                            {
-                                                                <div class="col-team col-xs-6 col-md-3">
-                                                                    <div class="team-profile">
-                                                                        <img alt="" src="~/Content/images/worker-and-2M8B.jpg">
-                                                                        <div class="team-hover">
-                                                                            <div class="team-content">
-                                                                                <div class="team-name">
-                                                                                    <h6>ENG. Test @i</h6>
-                                                                                    <div class="team-spec">
-                                                                                        Project Engineer
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="team-social">
-                                                                                    <a href="" class="icon  icon-medium icon-apartment"></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            }
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+                                            </section>
+                                        }
 
                                     </div>
                                 </div>
@@ -2454,7 +2123,7 @@
                     /* <![CDATA[ */
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* ]]> */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            /* ]]> */
                 </script>
                 <script type="text/javascript" src="~/js/main.js" id="bauhaus-main-js"></script>
                 <script type="text/javascript" src="~/js/animsition.min.js" id="animsition-js"></script>
@@ -2519,10 +2188,10 @@
                 <div class="social-list">
 
 
-                <a target="_blank" class="fa fa-instagram" href="https://www.instagram.com/ocean__home?igsh=MWhqdTdnZG03MTNzdA%3D%3D&utm_source=qr"></a>
+                <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
 
 
-                <a target="_blank" href="https://www.tiktok.com/@@ocean_home.kw?_t=8mmYUdmOYdj&_r=1"
+                <a target="_blank" href="@Model.contact.Tiktok"
                 class="icon ion-social-tiktok"></a>
 
                 </div>

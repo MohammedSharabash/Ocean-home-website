@@ -1,0 +1,197 @@
+﻿@model Ocean_Home.Models.Domain.OurAffiliate
+@{
+    ViewBag.Title = "تعديل ";
+}
+
+<h1 class="text-center mb-30">@ViewBag.Title</h1>
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+@using (Html.BeginForm("Edit", "Slider", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(d => d.CreatedOn)
+    @Html.HiddenFor(d => d.DeletedOn)
+    @Html.HiddenFor(d => d.Id)
+    @Html.HiddenFor(d => d.IsDeleted)
+    @Html.HiddenFor(d => d.IsModified)
+    @Html.HiddenFor(d => d.ModifiedOn)
+    @Html.HiddenFor(d => d.ImageUrl_150x150)
+    @Html.HiddenFor(d => d.ImageUrl_300x300)
+    @Html.HiddenFor(d => d.ImageUrl_370x370)
+    @Html.HiddenFor(d => d.ImageUrl_685x685)
+    @Html.HiddenFor(d => d.ImageUrl_768x768)
+    @Html.HiddenFor(d => d.ImageUrl_1024x1024)
+    @Html.HiddenFor(d => d.ImageUrl_1080)
+    @Html.AntiForgeryToken()
+    <div class="row" style="margin:10px;">
+
+
+        @if (Model.ImageUrl_150x150 != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="ImageUrl_150x150" class="col-sm-5 control-label">150x150 صوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/System/@Model.ImageUrl_150x150" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">150x150 صورة :</label>
+                <div class="col-sm-7">
+                    <input name="ImageUrl_150x150" type="file" id="ImageUrl_150x150" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+        @if (Model.ImageUrl_300x300 != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="ImageUrl_300x300" class="col-sm-5 control-label">300x300 صوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/System/@Model.ImageUrl_300x300" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">300x300 صورة :</label>
+                <div class="col-sm-7">
+                    <input name="ImageUrl_300x300" type="file" id="ImageUrl_300x300" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+        @if (Model.ImageUrl_370x370 != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="ImageUrl_370x370" class="col-sm-5 control-label">370x370 صوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/System/@Model.ImageUrl_370x370" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">370x370 صورة :</label>
+                <div class="col-sm-7">
+                    <input name="ImageUrl_370x370" type="file" id="ImageUrl_370x370" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+        @if (Model.ImageUrl_685x685 != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="ImageUrl_685x685" class="col-sm-5 control-label">685x685 صوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/System/@Model.ImageUrl_685x685" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">685x685 صورة :</label>
+                <div class="col-sm-7">
+                    <input name="ImageUrl_685x685" type="file" id="ImageUrl_685x685" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+        @if (Model.ImageUrl_768x768 != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="ImageUrl_768x768" class="col-sm-5 control-label">768x768 صوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/System/@Model.ImageUrl_768x768" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">768x768 صورة :</label>
+                <div class="col-sm-7">
+                    <input name="ImageUrl_768x768" type="file" id="ImageUrl_768x768" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+        @if (Model.ImageUrl_1024x1024 != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="ImageUrl_1024x1024" class="col-sm-5 control-label">1024x1024 صوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/System/@Model.ImageUrl_1024x1024" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">1024x1024 صورة :</label>
+                <div class="col-sm-7">
+                    <input name="ImageUrl_1024x1024" type="file" id="ImageUrl_1024x1024" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+        @if (Model.ImageUrl_1080 != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="ImageUrl_1080" class="col-sm-5 control-label">1080 صوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/System/@Model.ImageUrl_1080" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">1080 صورة :</label>
+                <div class="col-sm-7">
+                    <input name="ImageUrl_1080" type="file" id="ImageUrl_1080" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="row" style="margin:10px;">
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required"></label>
+                <div class="col-sm-7">
+                    <button style="text-align:center !important" type="submit" class="btn btn-success">تعديل</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+}

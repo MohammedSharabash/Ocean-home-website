@@ -17,30 +17,30 @@
     @Html.HiddenFor(d => d.ModifiedOn)
     @Html.AntiForgeryToken()
     <div class="row" style="margin:10px;">
-        <div class="col-lg-6 mb-10">
+        <div class="col-lg-12 mb-10">
             <div class="form-group">
-                <label for="NameEn" class="col-sm-5 control-label required">نبذه عننا :</label>
-                <div class="col-sm-7">
-                    <textarea asp-for="Description" required id="Description" class="form-control valid" rows="7"> 
-                                                                           </textarea>
+                <label for="NameEn" class="col-sm-3 control-label required">نبذه عننا :</label>
+                <div class="col-sm-9">
+                    <textarea asp-for="Description" required id="Description" class="form-control valid" rows="10"> 
+                                                                                       </textarea>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 mb-10">
+        <div class="col-lg-12 mb-10">
             <div class="form-group">
-                <label for="OurMessage" class="col-sm-5 control-label required">رسالتنا :</label>
-                <div class="col-sm-7">
-                    <textarea asp-for="OurMessage" required id="OurMessage" class="form-control valid" rows="7"> 
-                                                                           </textarea>
+                <label for="OurMessage" class="col-sm-3 control-label required">رسالتنا :</label>
+                <div class="col-sm-9">
+                    <textarea asp-for="OurMessage" required id="OurMessage" class="form-control valid" rows="10"> 
+                                                                                       </textarea>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 mb-10">
+        <div class="col-lg-12 mb-10">
             <div class="form-group">
-                <label for="OurVision" class="col-sm-5 control-label required">رؤيتنا :</label>
-                <div class="col-sm-7">
-                    <textarea asp-for="OurVision" required id="OurVision" class="form-control valid" rows="7"> 
-                                                                           </textarea>
+                <label for="OurVision" class="col-sm-3 control-label required">رؤيتنا :</label>
+                <div class="col-sm-9">
+                    <textarea asp-for="OurVision" required id="OurVision" class="form-control valid" rows="10"> 
+                                                                                       </textarea>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
                     <label for="Image" class="col-sm-5 control-label">الصوره :</label>
                     <div class="col-sm-7">
                         <div class="input-group">
-                            <img src="~/Images/Course/@Model.ImageUrl" width="150" />
+                            <img src="~/Images/System/@Model.ImageUrl" width="150" />
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <label for="Image2" class="col-sm-5 control-label">الغلاف :</label>
                     <div class="col-sm-7">
                         <div class="input-group">
-                            <img src="~/Images/Course/@Model.CoverImageUrl" width="150" />
+                            <img src="~/Images/System/@Model.CoverImageUrl" width="150" />
                         </div>
                     </div>
                 </div>

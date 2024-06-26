@@ -1,25 +1,45 @@
-﻿@model Ocean_Home.Models.Domain.ProjectImage
+﻿@model Ocean_Home.Models.ViewModel.ImageVM
 @{
     ViewBag.Title = "تعديل ";
+    var temp = Model;
 }
 
 <h1 class="text-center mb-30">@ViewBag.Title</h1>
 @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-@using (Html.BeginForm("Edit", "Video", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Image", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    @Html.HiddenFor(d => d.CreatedOn)
-    @Html.HiddenFor(d => d.DeletedOn)
-    @Html.HiddenFor(d => d.Id)
-    @Html.HiddenFor(d => d.IsDeleted)
-    @Html.HiddenFor(d => d.IsModified)
-    @Html.HiddenFor(d => d.ModifiedOn)
-    @Html.AntiForgeryToken()
+    @* @Html.HiddenFor(d => d.Id)
+    @Html.HiddenFor(d => d.ProjectId) *@
+    <input hidden asp-for="Id" />
+    <input hidden asp-for="ProjectId" />
     <div class="row" style="margin:10px;">
+        @if (Model.ImageUrl != null)
+        {
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="Image" class="col-sm-5 control-label">صوره المشروع:</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/Project/@Model.ImageUrl" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">تغير ألصورة :</label>
+                <div class="col-sm-7">
+                    <input name="Image" type="file" id="Image" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
         <div class="col-lg-6 mb-10">
             <div class="form-group">
                 <label for="Sort" class="col-sm-5 control-label required">الترتيب:</label>
                 <div class="col-sm-7">
-                    <input type="number" asp-for="Sort" name="Sort" required class="form-control valid" />
+                    <input type="number" asp-for="Sort" required class="form-control valid" />
                 </div>
             </div>
         </div>

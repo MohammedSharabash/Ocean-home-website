@@ -5,6 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Ocean_Home.Models.Enums;
+using Ocean_Home.Helper;
 
 namespace Ocean_Home.Controllers
 {
@@ -12,12 +15,13 @@ namespace Ocean_Home.Controllers
     {
         private readonly IGeneric<OurAffiliate> _Affiliates;
         private readonly ICRUD<OurAffiliate> _CRUD;
-        public AffiliatesController(IGeneric<OurAffiliate> Image, ICRUD<OurAffiliate> CRUD)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public AffiliatesController(IGeneric<OurAffiliate> Affiliates, ICRUD<OurAffiliate> CRUD, IWebHostEnvironment webHostEnvironment)
         {
-            _Affiliates = Image;
+            _Affiliates = Affiliates;
             _CRUD = CRUD;
+            _webHostEnvironment = webHostEnvironment;
         }
-
         public bool auth()
         {
             if (!User.IsInRole("Admin"))
@@ -26,69 +30,158 @@ namespace Ocean_Home.Controllers
             }
             return true;
         }
-        //public async Task<IActionResult> Index(long id, string q)
-        //{
-        //    if (!auth())
-        //        return RedirectToAction("Login", "cp");
+        public IActionResult Index(string q)
+        {
+            if (!User.IsInRole("Admin"))
+            {
+                return RedirectToAction("Login", "cp");
+            }
+            if (!auth())
+                return RedirectToAction("Login", "cp");
 
-        //    ViewBag.Id = id;
-        //    if (q == "deleted")
-        //    {
-        //        ViewBag.State = "D";
-        //        return View(_Image.Get(x => x.IsDeleted && x.ProjectId == id).OrderBy(x => x.Sort).ToList());
-        //    }
-        //    return View(_Image.Get(x => !x.IsDeleted && (x.ProjectId == id)).OrderBy(x => x.Sort).ToList());
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> Create(ProjectImage model)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest("حدث خطاء ما اثناء اضافة البيانات");
-        //    }
-        //    if (!await _Image.Add(model))
-        //    {
-        //        return BadRequest("حدث خطاء ما من فضلك حاول لاحقاً");
-        //    }
-        //    return RedirectToAction(nameof(Index), new { id = model.ProjectId });
-        //}
-        //public async Task<IActionResult> Edit(long id)
-        //{
-        //    if (!auth())
-        //        return RedirectToAction("Login", "cp");
-        //    if (!await _Image.IsExist(x => x.Id == id))
-        //        return NotFound();
-        //    return View(_Image.Get(x => x.Id == id).First());
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> Edit(ProjectImage Image)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest("حدث خطاء اثناء ادخال البيانات");
+            if (q == "deleted")
+            {
+                ViewBag.State = "D";
+                return View(_Affiliates.Get(x => x.IsDeleted).ToList());
+            }
+            return View(_Affiliates.Get(x => !x.IsDeleted).ToList());
+        }
+        [HttpPost]
+        public async Task<IActionResult> Create(OurAffiliate model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("حدث خطاء ما اثناء اضافة البيانات");
+            }
+            //////////////////////////////
+            /// الصور
 
-        //    if (!await _Image.Update(Image))
-        //        return BadRequest("حدث خطاء ما من فضلك حاول لاحقاً");
-        //    await _CRUD.Update(Image.Id);
-        //    return RedirectToAction(nameof(Index), new { id = Image.ProjectId });
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> DeleteItem(long id)
-        //{
-        //    if (!await _Image.IsExist(x => x.Id == id))
-        //    {
-        //        return Json(new { success = false, message = "هذه الفيديو غير موجوده" });
-        //    }
-        //    else
-        //    {
+            var file = HttpContext.Request.Form.Files.GetFile("ImageUrl_150x150");
+            if (file != null)
+            {
+                model.ImageUrl_150x150 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_300x300");
+            if (file != null)
+            {
+                model.ImageUrl_300x300 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_370x370");
+            if (file != null)
+            {
+                model.ImageUrl_370x370 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_685x685");
+            if (file != null)
+            {
+                model.ImageUrl_685x685 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_768x768");
+            if (file != null)
+            {
+                model.ImageUrl_768x768 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_1024x1024");
+            if (file != null)
+            {
+                model.ImageUrl_1024x1024 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_1080");
+            if (file != null)
+            {
+                model.ImageUrl_1080 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
 
-        //        if (!await _CRUD.ToggleDelete(id))
-        //        {
-        //            return Json(new { success = false, message = "حدث خطاء ما من فضلك حاول لاحقاً " });
-        //        }
-        //        return RedirectToAction(nameof(Index), new { id = _Image.Get(x => x.Id == id).First().ProjectId });
+            ///////////
+            if (!await _Affiliates.Add(model))
+            {
+                return BadRequest("حدث خطأ ما من فضلك حاول لاحقاً");
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Edit(long id)
 
-        //    }
+        {
+            if (!User.IsInRole("Admin"))
+            {
+                return RedirectToAction("Login", "cp");
+            }
+            if (!auth())
+                return RedirectToAction("Login", "cp");
+            if (!await _Affiliates.IsExist(x => x.Id == id))
+                return NotFound();
+            return View(_Affiliates.Get(x => x.Id == id).First());
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(OurAffiliate model)
+        {
 
-        //}
+            //////////////////////////////
+            /// الصور
+
+            var file = HttpContext.Request.Form.Files.GetFile("ImageUrl_150x150");
+            if (file != null)
+            {
+                model.ImageUrl_150x150 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_300x300");
+            if (file != null)
+            {
+                model.ImageUrl_300x300 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_370x370");
+            if (file != null)
+            {
+                model.ImageUrl_370x370 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_685x685");
+            if (file != null)
+            {
+                model.ImageUrl_685x685 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_768x768");
+            if (file != null)
+            {
+                model.ImageUrl_768x768 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_1024x1024");
+            if (file != null)
+            {
+                model.ImageUrl_1024x1024 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+            file = HttpContext.Request.Form.Files.GetFile("ImageUrl_1080");
+            if (file != null)
+            {
+                model.ImageUrl_1080 = await MediaControl.Upload(FilePath.System, file, _webHostEnvironment);
+            }
+
+            ///////////
+            if (!await _Affiliates.Update(model))
+                return BadRequest("حدث خطأ ما من فضلك حاول لاحقاً");
+            await _CRUD.Update(model.Id);
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpDelete]
+        public async Task<IActionResult> Delete(long id)
+        {
+            if (!await _Affiliates.IsExist(x => x.Id == id))
+            {
+                return Json(new { success = false, message = "هذا العنصر غير موجود" });
+            }
+            else
+            {
+
+                if (!await _CRUD.ToggleDelete(id))
+                {
+                    return Json(new { success = false, message = "حدث خطأ ما من فضلك حاول لاحقاً " });
+                }
+                if (_Affiliates.Get(x => x.Id == id).First().IsDeleted)
+                    return Json(new { success = true, message = "تم حذف العنصر بنجاح لاسترجاعه قم بالتوجهه الغلافات المحذوفة " });
+                else
+                    return Json(new { success = true, message = "تم استراجاع العنصر بنجاحة " });
+
+            }
+
+        }
     }
 }

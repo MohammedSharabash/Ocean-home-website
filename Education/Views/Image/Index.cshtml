@@ -35,94 +35,26 @@
                         @Html.ValidationSummary(false, "", new { @class = "text-danger" })
                         @using (Html.BeginForm("Create", "Image", FormMethod.Post, new { enctype = "multipart/form-data" }))
                         {
+                            <input hidden name="ProjectId" value="@ViewBag.Id" />
                             @Html.AntiForgeryToken()
                             <div class="row" style="margin:10px;">
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="NameAr" class="col-sm-5 control-label required">اسم الفيديو بالعربى: </label>
-                                        <div class="col-sm-7">
-                                            <input name="NameAr" type="text" id="NameAr" required class="form-control valid" />
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div class="col-lg-6 mb-10">
                                     <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">اسم الفيديو بالانجليزى:</label>
+                                        <label for="ImageFiles" class="col-sm-5 control-label required">صور المشروع:</label>
                                         <div class="col-sm-7">
-                                            <input name="Name" type="text" required id="Name" class="form-control valid" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">تقاصيل الفيديو بالعربى:</label>
-                                        <div class="col-sm-7">
-                                            <textarea name="DescriptionAr" required id="DescriptionAr" class="form-control valid" rows="7"> 
-                                                                                               </textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="NameEn" class="col-sm-5 control-label required">تفاصيل الفيديو بالانجليزى:</label>
-                                        <div class="col-sm-7">
-                                            <textarea name="Description" required id="DescriptionAr" class="form-control valid" rows="7"> 
-                                                                                               </textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="URL" class="col-sm-5 control-label required">: اللينك الخاص بالفيديو </label>
-                                        <div class="col-sm-7">
-                                            <input name="URL" type="text" id="URL" required class="form-control valid" />
+                                            <input type="file" id="ImageFiles" name="ImageFiles" class="form-control" multiple />
                                         </div>
                                     </div>
                                 </div>
                                 @* <div class="col-lg-6 mb-10">
                             <div class="form-group">
-                            <label for="PublitioAccountID" class="col-sm-5 control-label required">   حساب Publitio  : </label>
+                            <label for="Sort" class="col-sm-5 control-label required">الترتيب:</label>
                             <div class="col-sm-7">
-                            <select name="PublitioAccountID" required class="form-control valid">
-                            @foreach (var item in accounts)
-                            {
-                            <option value="@item.Id">@item.name</option>
-                            }
-                            </select>
-
-                            </div>
-                            </div>
-                            </div>
-                            <div class="col-lg-6 mb-10">
-                            <div class="form-group">
-                            <label for="URL2" class="col-sm-5 control-label required">  كود الفيديو  : </label>
-                            <div class="col-sm-7">
-                            <input name="URL2" type="text" id="URL2" required class="form-control valid" />
+                            <input type="number" id="Sort" name="Sort" required class="form-control valid" />
                             </div>
                             </div>
                             </div> *@
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="Free" class="col-sm-5 control-label ">هل هذا الفيديو مجانى؟</label>
-                                        <div class="col-sm-7">
-                                            <input type="checkbox" data-val="true" id="Free" name="Free" value="true">
-
-                                            <input name="Free" type="hidden" value="false" checked>
-
-                                            <input name="CourseId" type="hidden" value="@ViewBag.Id" id="CourseId" hidden />
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-10">
-                                    <div class="form-group">
-                                        <label for="Sort" class="col-sm-5 control-label required">الترتيب:</label>
-                                        <div class="col-sm-7">
-                                            <input type="number" id="Sort" name="Sort" required class="form-control valid" />
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <button type="submit" class="btn btn-success">إضافة</button>
                         }
@@ -145,7 +77,8 @@
                 <thead>
                     <tr>
                         <th style="text-align:center">الترتيب </th>
-                        <th style="text-align:center ">الحالة</th>
+                        <th style="text-align:center ">الصوره</th>
+                        <th style="text-align:center">الحالة</th>
                         <th style="text-align:center ">التحكم</th>
                     </tr>
                 </thead>
@@ -157,7 +90,16 @@
 
                                 @item.Sort
                             </td>
-
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img src="@Url.Content(item.ImageUrl != null ? ("/Images/Project/" + item.ImageUrl) : "~/Content/assets/imgs/unnamed.jpg")" width="150" height="50" />
+                                }
+                                else
+                                {
+                                    <span>---</span>
+                                }
+                            </td>
                             <td>
                                 @if (item.IsDeleted == true)
                                 {

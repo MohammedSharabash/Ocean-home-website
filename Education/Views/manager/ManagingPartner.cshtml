@@ -1,0 +1,75 @@
+﻿@model Ocean_Home.Models.Domain.Manager
+@{
+    ViewBag.Title = "بيانات شريكنا الإداري ";
+}
+
+<h1 class="text-center mb-30">@ViewBag.Title</h1>
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+@using (Html.BeginForm("EditManagingPartner", "manager", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(d => d.CreatedOn)
+    @Html.HiddenFor(d => d.DeletedOn)
+    @Html.HiddenFor(d => d.Id)
+    @Html.HiddenFor(d => d.IsDeleted)
+    @Html.HiddenFor(d => d.IsModified)
+    @Html.HiddenFor(d => d.ImageUrl)
+    @Html.HiddenFor(d => d.jobTitle)
+    @Html.HiddenFor(d => d.ModifiedOn)
+    @Html.AntiForgeryToken()
+    <div class="row" style="margin:10px;">
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Name" class="col-sm-5 control-label required">اسم شريكنا الإداري  : </label>
+                <div class="col-sm-7">
+                    <input asp-for="Name" type="text" id="Content" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="Description" class="col-sm-5 control-label required">الحاله المهنيه  :</label>
+                <div class="col-sm-7">
+                    <textarea asp-for="Description" required id="Description" class="form-control valid" rows="7"> 
+                                                                                                   </textarea>
+                </div>
+            </div>
+        </div>
+
+        @if (Model.ImageUrl != null)
+        {
+            <div class="col-lg-6  mb-10">
+                <div class="form-group">
+                    <label for="Image" class="col-sm-5 control-label">الصوره :</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <img src="~/Images/Manager/@Model.ImageUrl" width="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required">تغير الصورة :</label>
+                <div class="col-sm-7">
+                    <input name="Image" type="file" id="Image" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row" style="margin:10px;">
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="NameEn" class="col-sm-5 control-label required"></label>
+                <div class="col-sm-7">
+                    <button style="text-align:center !important" type="submit" class="btn btn-success">تعديل</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+}
