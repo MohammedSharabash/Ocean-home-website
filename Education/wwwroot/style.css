@@ -1303,7 +1303,7 @@ footer.footer .inline-block {
     align-items: center;
     flex-direction: row-reverse;
     padding-top: 0;
-    height: 70px;
+    height: 100px;
     margin-bottom: 0 !important;
 }
 
@@ -1316,6 +1316,7 @@ footer.footer .inline-block {
 .left {
     float: left;
 }
+
 .right {
     float: right;
 }
@@ -1334,7 +1335,7 @@ footer.footer .inline-block {
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-right: 0.65rem;
-    height: 4rem !important;
+    height: 6rem !important;
 }
 
 .contact-row a {

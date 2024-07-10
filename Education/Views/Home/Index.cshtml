@@ -79,7 +79,7 @@
                     "url": "",
                     "logo": {
                         "@@type": "ImageObject",
-                        "url": "Content/images/oshn home logo.png",
+                        "url": "Content/images/logo.jpg",
                         "@@id": "/#organizationLogo",
                         "width": 1080,
                         "height": 300
@@ -1036,7 +1036,7 @@
 
         body {
             color:;
-            font-family: archivo !important;
+            font-family: 'Cairo', sans-serif;
             font-size:;
             font-style:;
             font-variant:;
@@ -1049,7 +1049,7 @@
 
         h1, h1.display-2 {
             color:;
-            font-family: archivo !important;
+            font-family: 'Cairo', sans-serif;
             font-size: !important;
             font-style:;
             font-variant:;
@@ -1063,7 +1063,7 @@
 
         h2 {
             color:;
-            font-family: archivo !important;
+            font-family: 'Cairo', sans-serif;
             font-size:;
             font-style:;
             font-variant:;
@@ -1077,7 +1077,7 @@
 
         h3 {
             color:;
-            font-family: archivo !important;
+            font-family: 'Cairo', sans-serif;
             font-size:;
             font-style:;
             font-variant:;
@@ -1091,7 +1091,7 @@
 
         h4 {
             color:;
-            font-family: archivo !important;
+            font-family: 'Cairo', sans-serif;
             font-size:;
             font-style:;
             font-variant:;
@@ -1105,7 +1105,7 @@
 
         h5 {
             color:;
-            font-family: archivo !important;
+            font-family: 'Cairo', sans-serif;
             font-size:;
             font-style:;
             font-variant:;
@@ -1119,7 +1119,7 @@
 
         h6 {
             color:;
-            font-family: archivo !important;
+            font-family: 'Cairo', sans-serif;
             font-size:;
             font-style:;
             font-variant:;
@@ -1134,7 +1134,7 @@
 
         blockquote p, blockquote {
             color:;
-            font-family: archivo !important;
+            font-family: 'Cairo', sans-serif;
             font-size:;
             font-style:;
             font-variant:;
@@ -1176,12 +1176,46 @@
             margin-bottom: 10px;
             text-align: center;
         }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin-bottom: 20px; /* مساحة بين العناصر العمودية */
+        }
+
+        .service-content {
+            display: flex;
+            align-items: center;
+            width: 100%; /* لضمان أن يكون العنصر بملء العرض */
+        }
+
+        .service-icon {
+            margin-right: 10px; /* مساحة بين الأيقونة والنص */
+            flex-shrink: 0; /* لمنع الأيقونة من التقلص */
+        }
+
+            .service-icon img {
+                width: 60px; /* تعديل حجم الأيقونة */
+                height: auto;
+                border-radius: 5px; /* نفس الإعدادات السابقة */
+            }
+
+        .service-text {
+            flex-grow: 1; /* النص يأخذ المتبقي من المساحة */
+        }
+
+            .service-text h4 {
+                color: white; /* لون النص */
+                margin: 0; /* إزالة المسافة الافتراضية */
+            }
+
     </style>
     <meta name="generator" content="" />
-    <link rel="icon" href="~/Content/images/oshn home logo.png" sizes="32x32" />
-    <link rel="icon" href="~/Content/images/oshn home logo.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="~/Content/images/oshn home logo.png" />
-    <meta name="msapplication-TileImage" content="~/Content/images/oshn home logo.png" />
+    <link rel="icon" href="~/Content/images/logo.jpg" sizes="32x32" />
+    <link rel="icon" href="~/Content/images/logo.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="~/Content/images/logo.jpg" />
+    <meta name="msapplication-TileImage" content="~/Content/images/logo.jpg" />
     <link href="~/style.css" rel="stylesheet" />
     <script type="text/javascript">function setREVStartSize(t) { try { var h, e = document.getElementById(t.c).parentNode.offsetWidth; if (e = 0 === e || isNaN(e) ? window.innerWidth : e, t.tabw = void 0 === t.tabw ? 0 : parseInt(t.tabw), t.thumbw = void 0 === t.thumbw ? 0 : parseInt(t.thumbw), t.tabh = void 0 === t.tabh ? 0 : parseInt(t.tabh), t.thumbh = void 0 === t.thumbh ? 0 : parseInt(t.thumbh), t.tabhide = void 0 === t.tabhide ? 0 : parseInt(t.tabhide), t.thumbhide = void 0 === t.thumbhide ? 0 : parseInt(t.thumbhide), t.mh = void 0 === t.mh || "" == t.mh || "auto" === t.mh ? 0 : parseInt(t.mh, 0), "fullscreen" === t.layout || "fullscreen" === t.l) h = Math.max(t.mh, window.innerHeight); else { for (var i in t.gw = Array.isArray(t.gw) ? t.gw : [t.gw], t.rl) void 0 !== t.gw[i] && 0 !== t.gw[i] || (t.gw[i] = t.gw[i - 1]); for (var i in t.gh = void 0 === t.el || "" === t.el || Array.isArray(t.el) && 0 == t.el.length ? t.gh : t.el, t.gh = Array.isArray(t.gh) ? t.gh : [t.gh], t.rl) void 0 !== t.gh[i] && 0 !== t.gh[i] || (t.gh[i] = t.gh[i - 1]); var r, a = new Array(t.rl.length), n = 0; for (var i in t.tabw = t.tabhide >= e ? 0 : t.tabw, t.thumbw = t.thumbhide >= e ? 0 : t.thumbw, t.tabh = t.tabhide >= e ? 0 : t.tabh, t.thumbh = t.thumbhide >= e ? 0 : t.thumbh, t.rl) a[i] = t.rl[i] < window.innerWidth ? 0 : t.rl[i]; for (var i in r = a[0], a) r > a[i] && 0 < a[i] && (r = a[i], n = i); var d = e > t.gw[n] + t.tabw + t.thumbw ? 1 : (e - (t.tabw + t.thumbw)) / t.gw[n]; h = t.gh[n] * d + (t.tabh + t.thumbh) } void 0 === window.rs_init_css && (window.rs_init_css = document.head.appendChild(document.createElement("style"))), document.getElementById(t.c).height = h, window.rs_init_css.innerHTML += "#" + t.c + "_wrapper { height: " + h + "px }" } catch (t) { console.log("Failure at Presize of Slider:" + t) } };</script>
     <noscript>
@@ -1550,7 +1584,7 @@
         <!-- Responsive -->
         <link rel="stylesheet" href="Content/css/responsive.css">
         <!-- fevicon -->
-        <link rel="icon" href="Content/images/oshn home logo.png" type="image/gif" />
+        <link rel="icon" href="Content/images/logo.jpg" type="image/gif" />
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="Content/css/jquery.mCustomScrollbar.min.css">
         <!-- FontAwesome CSS -->
@@ -1634,7 +1668,7 @@
 
             body {
                 color:;
-                font-family: archivo !important;
+                font-family: 'Cairo', sans-serif;
                 font-size:;
                 font-style:;
                 font-variant:;
@@ -1647,7 +1681,7 @@
 
             h1, h1.display-2 {
                 color:;
-                font-family: archivo !important;
+                font-family: 'Cairo', sans-serif;
                 font-size: !important;
                 font-style:;
                 font-variant:;
@@ -1661,7 +1695,7 @@
 
             h2 {
                 color:;
-                font-family: archivo !important;
+                font-family: 'Cairo', sans-serif;
                 font-size:;
                 font-style:;
                 font-variant:;
@@ -1675,7 +1709,7 @@
 
             h3 {
                 color:;
-                font-family: archivo !important;
+                font-family: 'Cairo', sans-serif;
                 font-size:;
                 font-style:;
                 font-variant:;
@@ -1689,7 +1723,7 @@
 
             h4 {
                 color:;
-                font-family: archivo !important;
+                font-family: 'Cairo', sans-serif;
                 font-size:;
                 font-style:;
                 font-variant:;
@@ -1703,7 +1737,7 @@
 
             h5 {
                 color:;
-                font-family: archivo !important;
+                font-family: 'Cairo', sans-serif;
                 font-size:;
                 font-style:;
                 font-variant:;
@@ -1717,7 +1751,7 @@
 
             h6 {
                 color:;
-                font-family: archivo !important;
+                font-family: 'Cairo', sans-serif;
                 font-size:;
                 font-style:;
                 font-variant:;
@@ -1732,7 +1766,7 @@
 
             blockquote p, blockquote {
                 color:;
-                font-family: archivo !important;
+                font-family: 'Cairo', sans-serif;
                 font-size:;
                 font-style:;
                 font-variant:;
@@ -1764,12 +1798,19 @@
                 background-color: #3f3e3e;
             }
         </style>
+        <style>
+            .custom-pdf-icon {
+                color: red; /* لون الأيقونة */
+                font-size: 24px; /* حجم الأيقونة */
+                margin-left: 10px; /* مسافة من النص */
+            }
+        </style>
         <meta name="generator" content="." />
-        <link rel="icon" href="~/Content/images/oshn home logo.png" sizes="32x32" />
-        <link rel="icon" href="~/Content/images/oshn home logo.png" sizes="192x192" />
-        <link rel="apple-touch-icon" href="~/Content/images/oshn home logo.png" />
+        <link rel="icon" href="~/Content/images/logo.jpg" sizes="32x32" />
+        <link rel="icon" href="~/Content/images/logo.jpg" sizes="192x192" />
+        <link rel="apple-touch-icon" href="~/Content/images/logo.jpg" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <meta name="msapplication-TileImage" content="~/Content/images/oshn home logo.png" />
+        <meta name="msapplication-TileImage" content="~/Content/images/logo.jpg" />
         <script type="text/javascript">function setREVStartSize(t) { try { var h, e = document.getElementById(t.c).parentNode.offsetWidth; if (e = 0 === e || isNaN(e) ? window.innerWidth : e, t.tabw = void 0 === t.tabw ? 0 : parseInt(t.tabw), t.thumbw = void 0 === t.thumbw ? 0 : parseInt(t.thumbw), t.tabh = void 0 === t.tabh ? 0 : parseInt(t.tabh), t.thumbh = void 0 === t.thumbh ? 0 : parseInt(t.thumbh), t.tabhide = void 0 === t.tabhide ? 0 : parseInt(t.tabhide), t.thumbhide = void 0 === t.thumbhide ? 0 : parseInt(t.thumbhide), t.mh = void 0 === t.mh || "" == t.mh || "auto" === t.mh ? 0 : parseInt(t.mh, 0), "fullscreen" === t.layout || "fullscreen" === t.l) h = Math.max(t.mh, window.innerHeight); else { for (var i in t.gw = Array.isArray(t.gw) ? t.gw : [t.gw], t.rl) void 0 !== t.gw[i] && 0 !== t.gw[i] || (t.gw[i] = t.gw[i - 1]); for (var i in t.gh = void 0 === t.el || "" === t.el || Array.isArray(t.el) && 0 == t.el.length ? t.gh : t.el, t.gh = Array.isArray(t.gh) ? t.gh : [t.gh], t.rl) void 0 !== t.gh[i] && 0 !== t.gh[i] || (t.gh[i] = t.gh[i - 1]); var r, a = new Array(t.rl.length), n = 0; for (var i in t.tabw = t.tabhide >= e ? 0 : t.tabw, t.thumbw = t.thumbhide >= e ? 0 : t.thumbw, t.tabh = t.tabhide >= e ? 0 : t.tabh, t.thumbh = t.thumbhide >= e ? 0 : t.thumbh, t.rl) a[i] = t.rl[i] < window.innerWidth ? 0 : t.rl[i]; for (var i in r = a[0], a) r > a[i] && 0 < a[i] && (r = a[i], n = i); var d = e > t.gw[n] + t.tabw + t.thumbw ? 1 : (e - (t.tabw + t.thumbw)) / t.gw[n]; h = t.gh[n] * d + (t.tabh + t.thumbh) } void 0 === window.rs_init_css && (window.rs_init_css = document.head.appendChild(document.createElement("style"))), document.getElementById(t.c).height = h, window.rs_init_css.innerHTML += "#" + t.c + "_wrapper { height: " + h + "px }" } catch (t) { console.log("Failure at Presize of Slider:" + t) } };</script>
         <noscript>
             <style>
@@ -1811,6 +1852,7 @@
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                             <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
+                            <a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a>
 
                         </div>
 
@@ -1832,7 +1874,7 @@
 
 
                     <a class="brand" href="">
-                        <img alt="" src="Content/images/oshn home logo.png">
+                        <img alt="" src="Content/images/logo.jpg">
                         <div class="brand-info">
                             <div class="brand-name"></div>
                             <div class="brand-text"></div>
@@ -1844,6 +1886,7 @@
                     <div class="social-list hidden-xs">
                         <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
                         <a target="_blank" href="@Model.contact.Tiktok" class="fab fa-tiktok"></a>
+                        <a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a>
                     </div>
                 </header>
 
@@ -1974,23 +2017,32 @@
                                     <section id="animation" class="section-about  " dir="rtl" lang="ar">
                                         <div class="container">
                                             <div class="row" style="color: #DADADA;">
-                                                <div class="col-md-6">
+                                                <div class="col-md-8">
                                                     <strong class="section-subtitle"></strong>
-                                                    <h2 class="section-title section-about-title" style="text-align: justify;font-size: 50px;">
-                                                        نبذة عنا
+                                                    <h2 class="section-title section-about-title" style="text-align: justify; font-size: 50px;">
+                                                        من نحن
+                                                        <a href="@Url.Action("DownloadPDF", "ContactUs")" style="font-size: xx-large;" title="تحميل الملف التعريفي">
+                                                            <i class="fa fa-file-pdf-o custom-pdf-icon" aria-hidden="true"></i>
+                                                        </a>
                                                     </h2>
+
                                                     <div class="about_box" style=" text-align: right;">
 
                                                         <p>@Model.aboutUS.Description</p>
-                                                        <div class="newservice" dir="ltr" @* style="background:none;border-radius:5px; color:white; padding-top: 5px!important;" *@>
+
+                                                        <div class="newservice" dir="ltr">
                                                             <div class="container">
                                                                 <div class="row" dir="rtl">
                                                                     @foreach (var item in Model.Specialties)
                                                                     {
-                                                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6" @* style="background: aliceblue;" *@>
-                                                                            <i><img src="/Images/Slider/@item.ImageUrl" style="border-radius:5px;"></i>
-                                                                            <div class="service-newbox">
-                                                                                <h4 style="color:white">@item.Content</h4>
+                                                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 service-item">
+                                                                            <div class="service-content">
+                                                                                <i class="service-icon">
+                                                                                    <img src="/Images/Slider/@item.ImageUrl">
+                                                                                </i>
+                                                                                <div class="service-text">
+                                                                                    <p>@item.Content</p>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     }
@@ -2006,10 +2058,10 @@
                                                     </div>
 
                                                 </div>
-                                                <div class="col-md-5 col-md-offset-1">
+                                                <div class="col-md-3 col-md-offset-1">
                                                     <div class="dots-image">
 
-                                                        <img decoding="async" alt="" class="about-img img-responsive" src="~/Images/System/@Model.aboutUS.ImageUrl">
+                                                        <img decoding="async" alt="" class="about-img img-responsive" style="max-width: 85%;" src="~/Images/System/@Model.aboutUS.ImageUrl">
 
 
                                                         <div class="dots"></div>
@@ -2017,6 +2069,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </section>
 
 
@@ -2224,7 +2277,7 @@
                         </div>
                     </div>
                 </div>
-                <link href="https://fonts.googleapis.com/css?family=Roboto:700%2C400" rel="stylesheet" property="stylesheet" media="all" type="text/css">
+                <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css">y
 
                 <script type="text/javascript">
                     if (typeof revslider_showDoubleJqueryError === "undefined") {
@@ -2258,7 +2311,7 @@
                     /* <![CDATA[ */
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* ]]> */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            /* ]]> */
                 </script>
                 <script type="text/javascript" src="~/js/main.js" id="bauhaus-main-js"></script>
                 <script type="text/javascript" src="~/js/animsition.min.js" id="animsition-js"></script>

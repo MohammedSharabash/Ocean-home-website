@@ -14,6 +14,8 @@ namespace Ocean_Home.Models.Domain
         public string Logo { get; set; }
         public string Instagram { get; set; }
         public string Tiktok { get; set; }
+        public string WhatsApp { get; set; }
+        public string PDF { get; set; }
 
     }
 }

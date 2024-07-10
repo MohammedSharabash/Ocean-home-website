@@ -65,6 +65,14 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="WhatsApp" class="col-sm-5 control-label required">WhatsApp Number    : </label>
+                <div class="col-sm-7">
+                    <input asp-for="WhatsApp" type="text" id="WhatsApp" required class="form-control valid" />
+                </div>
+            </div>
+        </div>
         @if (Model.Logo != null)
         {
             <div class="col-lg-6  mb-10">
@@ -86,6 +94,30 @@
                 </div>
             </div>
         </div>
+        @if (Model.PDF != null)
+        {
+            <div class="col-lg-6 mb-10">
+                <div class="form-group">
+                    <label for="PDF" class="col-sm-5 control-label">تحميل PDF الحالي:</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <a href="@Url.Action("DownloadPDF", "ContactUs")" class="btn btn-primary">
+                                تحميل PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-6 mb-10">
+            <div class="form-group">
+                <label for="PDF" class="col-sm-5 control-label required">تغيير PDF:</label>
+                <div class="col-sm-7">
+                    <input name="PDF" type="file" id="PDF" class="form-control valid" />
+                </div>
+            </div>
+        </div>
+
 
 
     </div>
