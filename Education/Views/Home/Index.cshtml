@@ -1804,6 +1804,11 @@
                 font-size: 24px; /* حجم الأيقونة */
                 margin-left: 10px; /* مسافة من النص */
             }
+
+            .btn-custom {
+                background: #a38510bf;
+                border-radius: 25px;
+            }
         </style>
         <meta name="generator" content="." />
         <link rel="icon" href="~/Content/images/logo.jpg" sizes="32x32" />
@@ -2021,8 +2026,9 @@
                                                     <strong class="section-subtitle"></strong>
                                                     <h2 class="section-title section-about-title" style="text-align: justify; font-size: 50px;">
                                                         من نحن
-                                                        <a href="@Url.Action("DownloadPDF", "ContactUs")" style="font-size: xx-large;" title="تحميل الملف التعريفي">
-                                                            <i class="fa fa-file-pdf-o custom-pdf-icon" aria-hidden="true"></i>
+                                                        <a href="@Url.Action("DownloadPDF", "ContactUs")" class="btn btn-custom" @* style="font-size: xx-large;" *@ title=" تحميل الملف التعريفي للشركة">
+                                                            @* <i class="fa fa-file-pdf-o custom-pdf-icon" aria-hidden="true"></i> *@
+                                                            تحميل الملف التعريفي للشركة
                                                         </a>
                                                     </h2>
 
@@ -2311,7 +2317,7 @@
                     /* <![CDATA[ */
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            /* ]]> */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* ]]> */
                 </script>
                 <script type="text/javascript" src="~/js/main.js" id="bauhaus-main-js"></script>
                 <script type="text/javascript" src="~/js/animsition.min.js" id="animsition-js"></script>
