@@ -76,7 +76,7 @@ namespace Ocean_Home.Controllers
                 {
                     await PDF.CopyToAsync(stream);
                 }
-                model.PDF = filePath;
+                model.PDF = Path.Combine("pdfs", fileName); // المسار النسبي داخل wwwroot;
             }
             if (!await _ContactUS.Update(model))
                 return BadRequest("حدث خطأ ما من فضلك حاول لاحقاً");
