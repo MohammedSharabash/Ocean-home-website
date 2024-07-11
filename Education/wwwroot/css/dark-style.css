@@ -3941,6 +3941,10 @@ a.brand:focus {
 
 .row-team {
     margin-top: -30px;
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .col-team {
@@ -4729,4 +4733,39 @@ a.brand:focus {
 }
 
 @media screen and (max-width: 500px) {
+}
+
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    
+}
+.contact-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+   
+    font-family: Arial, sans-serif;
+}
+.contact-section3 {
+    margin-top: 100px;
+}
+.contact-section2 .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: green;
+}
+
+.contact-section2 .text {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+ font-weight:700;
+    margin-bottom: 10px;
 }

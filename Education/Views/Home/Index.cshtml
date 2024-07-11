@@ -1595,6 +1595,7 @@
         <style>
             .navbar {
                 height: 7rem;
+                box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
             }
 
             .brand {
@@ -1855,14 +1856,12 @@
                     </ul>
                     <div class="menu-footer right-boxed">
 
-                        <div class="social-list">
+                        <div class="social-list d-flex flex-row">
 
-                            <a target="_blank" href="@Model.contact.Tiktok" class="icon ion-social-tiktok"></a>
-                            <!-- Font Awesome for Instagram -->
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-                            <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
-                            <a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a>
+                           
+                              <a class="twitter" target="_blank" href="@Model.contact.Instagram"><i class="fa fa-instagram"></i></a> 
+                               <a class="dribbble" target="_blank" href="@Model.contact.Tiktok"><i class="fa-brands fa-tiktok"></i></a> 
+                              <a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a> 
 
                         </div>
 
@@ -2025,8 +2024,17 @@
 
 
                                     <section id="animation" class="section-about  " dir="rtl" lang="ar">
-                                        <div class="container">
+                                        <div class="container-fluid">
                                             <div class="row" style="color: #DADADA;">
+                                                <div class="col-md-3 col-md-offset-1">
+                                                    <div class="dots-image">
+
+                                                        <img decoding="async" alt="" class="about-img img-responsive" style="max-width: 85%;" src="~/Images/System/@Model.aboutUS.ImageUrl">
+
+
+                                                        <div class="dots"></div>
+                                                    </div>
+                                                </div>
                                                 <div class="col-md-8">
                                                     <strong class="section-subtitle"></strong>
                                                     <h2 class="section-title section-about-title" style="text-align: justify; font-size: 50px;">
@@ -2065,15 +2073,7 @@
                                                     </div>
 
                                                 </div>
-                                                <div class="col-md-3 col-md-offset-1">
-                                                    <div class="dots-image">
-
-                                                        <img decoding="async" alt="" class="about-img img-responsive" style="max-width: 85%;" src="~/Images/System/@Model.aboutUS.ImageUrl">
-
-
-                                                        <div class="dots"></div>
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
                                         </div>
 
@@ -2081,7 +2081,7 @@
 
 
 
-                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1702548819686" id="animation">
+                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1702548819686" id="animation" dir="rtl">
                                         <div class="wpb_wrapper">
                                             <div class="quote-container">
                                                 <div class="quote-dots"></div>
@@ -2119,13 +2119,11 @@
 
                                     <!-- Section Projects -->
 
-                                    <section class="section-projects section  ">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-lg-5">
-                                                    <h2 class="section-title">المشاريع الحاليه</h2>
-                                                </div>
-                                                <div class="col-lg-7">
+                                    <section class="section-projects section  " dir="rtl">
+                                        <div class="container-fluid">
+                                            <div class="row" dir="rtl">
+                                                
+                                                <div class="col-lg-6">
                                                     <div class="filter-content">
 
                                                         <ul class="filter-carousel filter pull-lg-right js-filter-carousel">
@@ -2145,6 +2143,9 @@
                                                         <a href="/home/projects"
                                                            class="view-projects">مشاهدة جميع المشاريع</a>
                                                     </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <h2 class="section-title">المشاريع الحاليه</h2>
                                                 </div>
                                             </div>
                                         </div>
@@ -2170,13 +2171,13 @@
                                         </div>
                                     </section>
 
-
-                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1702548854154" id="animation">
+    
+                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1702548854154" id="animation" dir="rtl">
                                         <div class="wpb_wrapper">
-                                            <div class="container">
+                                            <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-lg-12">
-                                                        <h2 class="section-title">360deg Video</h2>
+                                                        <h2 class="section-title">فيديو 360 درجة</h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2192,9 +2193,10 @@
 
                                         </div>
                                     </div>
-                                    <div class="wpb_gallery wpb_content_element vc_clearfix  aos-zoom-in" id="affiliates">
+                                    
+                                    <div class="wpb_gallery wpb_content_element vc_clearfix  aos-zoom-in" id="affiliates" dir="rtl">
                                         <div class="wpb_wrapper">
-                                            <h2 class="wpb_heading wpb_gallery_heading">Our Affiliates</h2>
+                                            <h2 class="wpb_heading wpb_gallery_heading">شركائنا</h2>
                                             <div class="wpb_gallery_slides wpb_image_grid" data-interval="3">
                                                 <ul class="wpb_image_grid_ul">
                                                     @foreach (var OurAffiliate in Model.OurAffiliates)
@@ -2209,80 +2211,75 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div><div class="vc_row wpb_row vc_row-fluid">
-                        <div class="wpb_column vc_column_container vc_col-sm-12" style="color: #DADADA;">
-                            <div class="vc_column-inner">
-                                <div class="wpb_wrapper">
-                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1702553608614">
-                                        <div class="wpb_wrapper">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <h2 class="section-title12">Contact Us</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-
-                                    <section>
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-3">
-                                                    <div class="section-info">
-                                                        <div class="title-hr"></div>
-                                                        <div class="info-title">Keep in touch</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="row-contact row">
-                                                        <div class="col-contact col-lg-6">
-                                                            <h3 class="contact-title contact-top"></h3>
-                                                            <p class="contact-address text-muted"><strong></strong></p>
-                                                            @* <p class="contact-row">Location: Mirqab, Shyama’a Tower, 4th floor</p> *@
-                                                            <p class="contact-row">
-                                                                Location: @Model.contact.Location
-                                                                <a href="https://goo.gl/maps/aSLd27hw4gX34HeH7">
-                                                                    <i class="fa fa-location-arrow custom-icon" aria-hidden="true"></i>
-                                                                </a>
-                                                            </p>
-                                                            <p class="contact-row">
-                                                                Mobile Phone: @Model.contact.MobilePhones
-                                                            </p>
-                                                            @* <p class="contact-row">Telephone: +965 2225 1296</p>
-                                                            <p class="contact-row">Fax: +965 2225 1297</p>
-                                                            <p class="contact-row">Email: bcc@backcombined.com</p>
-                                                            <p class="contact-row">Recruitment Email:recruitment@backcombined.com</p>
-                                                            *@
-                                                        </div>
-                                                        <div class="col-contact col-lg-6">
-                                                            <p class="contact-top">
-                                                                <strong class="text-muted">Call directly:</strong>
-                                                            </p>
-                                                            <p class="phone-lg ">@Model.contact.CallDirectly_Phone</p>
-                                                            <p class="text-muted">
-                                                                <strong class="">Work Hours</strong><br>
-                                                                Week Days: @Model.contact.WorkHours
-                                                            </p>
-                                                            <div class="text-muted">
-                                                                <strong class="text-dark"></strong><br>
-                                                                <div class="contact-social social-list">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
                                 </div>
                             </div>
                         </div>
                     </div>
+                     
+                        <footer class="site-footer" dir="ltr">
+                                  <div class="container">
+                                    <div class="row" dir="rtl">
+                                      
+                                        
+                                      <div class="col-6 col-lg-4 col-md-4">
+                                        <h6>استمر في المواصلة</h6>
+                                        <ul class="footer-links">
+                                          <li><a href="https://goo.gl/maps/aSLd27hw4gX34HeH7" target="_blank">
+                                                <i class="fa fa-location-arrow custom-icon" aria-hidden="true"></i>
+                                                @Model.contact.Location
+                                              </a>
+                                          </li>
+                                          <li><a href="">
+                                              
+                                                <i class="fa  fa-phone custom-icon" aria-hidden="true"></i>
+                                                    @Model.contact.MobilePhones
+                                              </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+
+                                      <div class="col-6 col-lg-4 col-md-4">
+                                        <h6>الاتصال المباشر:</h6>
+                                        <ul class="footer-links">
+                                            <li><a href=""><i class="fa  fa-phone custom-icon" aria-hidden="true"></i>@Model.contact.CallDirectly_Phone</a></li>
+                                        </ul>
+                                         <h6>ساعات العمل:</h6>
+                                        <ul class="footer-links"> 
+                                            <li><a href=""><i class="fa  fa-calendar-check custom-icon" aria-hidden="true"></i>@Model.contact.WorkHours</a></li>
+                                        </ul>
+                                      </div>
+                                <div class="col-6 col-lg-4 col-md-4">
+                                    <a class="brand" href="">
+                                        <img alt="" src="Content/images/logo.jpg">
+                                        <div class="brand-info">
+                                            <div class="brand-name"></div>
+                                            <div class="brand-text"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                    </div>
+                                    <hr>
+                                  </div>
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <p class="copyright-text">
+                                            Copyright &copy; 2017 All Rights Reserved  
+                                        </p>
+                                      </div>
+
+                                      <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <ul class="social-icons">
+                                            
+                                        <li><a class="twitter" target="_blank" href="@Model.contact.Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a class="dribbble" target="_blank" href="@Model.contact.Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                                        <li><a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a></li>
+                                    </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                        </footer>
                 </div>
                 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css">y
 

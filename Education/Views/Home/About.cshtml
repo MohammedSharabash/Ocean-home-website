@@ -1870,13 +1870,13 @@
                     </div>
                 </header>
 
-                <div class="content">
+                <div class="content" dir="rtl">
 
-                    <div class="page-inner">
-                        <div class="vc_row wpb_row vc_row-fluid">
-                            <div class="wpb_column vc_column_container vc_col-sm-12">
-                                <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
+                    <div class="page-inner" dir="rtl">
+                        <div class="vc_row wpb_row vc_row-fluid" dir="rtl">
+                            <div class="wpb_column vc_column_container vc_col-sm-12" dir="rtl">
+                                <div class="vc_column-inner" dir="rtl">
+                                    <div class="wpb_wrapper" dir="rtl">
                                         <div class="wpb_single_image wpb_content_element vc_align_center">
 
                                             <figure class="wpb_wrapper vc_figure">
@@ -1885,186 +1885,143 @@
                                         </div>
 
 
-                                        <section class="section about-info   " style="  direction: rtl;   text-align: right;" id="about_text">
+                                        <section class="section about-info   "   id="about_text" dir="rtl">
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">رسالتنــا</div>
+                                                     <div class="col-12 mb-4  ">
+                                                        <div class="row">
+                                                            <div class="col-md-9">
+                                                                <div class="text-display-1">
+                                                                    <p>
+                                                                        @Model.aboutUS.OurMessage
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="section-info">
+                                                                    <div class="title-hr"></div>
+                                                                    <div class="info-title">رسالتنــا</div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-9">
+                                                     </div>
+                                                     <div class="col-12 mb-4 ">
+                                                        <div class="row">
+                                                           <div class="col-md-9">
+                                                                <div class="text-display-1">
+                                                                    <p>
+                                                                        @Model.aboutUS.OurVision
+                                                                    </p>
+                                                            
+
+                                                                </div>
+                                                            </div>
+                                                                 <div class="col-md-3">
+                                                                <div class="section-info">
+                                                                    <div class="title-hr"></div>
+                                                                    <div class="info-title">رؤيتنــــا</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                     </div>
+                                                    <div class="col-12 mb-4 ">
+                                                        <div class="row">
+                                                            <div class="col-md-9">
                                                         <div class="text-display-1">
                                                             <p>
-                                                                @Model.aboutUS.OurMessage
+                                                                @Model.aboutUS.Description
+                                                                
                                                             </p>
+                                                       
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-
-
-                                        <section class="section about-info   " style="  direction: rtl;   text-align: right;">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="section-info">
-                                                            <div class="title-hr"></div>
-                                                            <div class="info-title">رؤيتنــــا</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="text-display-1">
-                                                            <p>
-                                                                @Model.aboutUS.OurVision
-                                                            </p>
-                                                            @* <ul class="left our-vision-list">
-                                                            <li aria-level="1"><b>Customer-oriented</b></li>
-                                                            <li aria-level="1"><b>Safety</b></li>
-                                                            <li aria-level="1"><b>Planning</b></li>
-                                                            <li aria-level="1"><b>Innovation</b></li>
-                                                            </ul>
-                                                            <ul class="left our-vision-list">
-                                                            <li aria-level="1"><b>Teamwork</b></li>
-                                                            <li aria-level="1"><b>Service after delivery</b></li>
-                                                            <li aria-level="1"><b>Quality control</b></li>
-                                                            <li aria-level="1"><b>Cost-efficiency</b></li>
-                                                            </ul>
-                                                            <ul class="left our-vision-list">
-                                                            <li aria-level="1"><b>Speed</b></li>
-                                                            <li aria-level="1"><b>Initiative</b></li>
-                                                            <li aria-level="1"><b>Value for money</b></li>
-                                                            </ul> *@
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-
-
-                                        <section class="section about-info   " style="  direction: rtl;   text-align: right;">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3">
+                                                        <div class="col-md-3">
                                                         <div class="section-info">
                                                             <div class="title-hr"></div>
                                                             <div class="">نبذه عنا</div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-9">
-                                                        <div class="text-display-1">
-                                                            <p>
-                                                                @Model.aboutUS.Description
-                                                                @* <ul class="left our-vision-list">
-                                                                <li aria-level="1">
-                                                                <b>
-                                                                <h4>أعمال السباكة</h4>
-                                                                </b>
-                                                                </li>
-                                                                </ul>
-                                                                <ul class="left our-vision-list">
-                                                                <li aria-level="1">
-                                                                <b>
-                                                                <h4>الأعمال الكهربية</h4>
-                                                                </b>
-                                                                </li>
-                                                                </ul>
-                                                                <ul class="left our-vision-list">
-                                                                <li aria-level="1">
-                                                                <b>
-                                                                <h4>أعمال التشطيبات</h4>
-                                                                </b>
-                                                                </li>
-                                                                </ul>
-                                                                <ul class="left our-vision-list">
-                                                                <li aria-level="1">
-                                                                <b>
-                                                                <h4>أعمال الإنشاءات</h4>
-                                                                </b>
-                                                                </li>
-                                                                </ul> *@
-                                                            </p>
-                                                            @* <p>وغيرها من الأعمال التي تتعلق بمجال المقاولات العامة ...</p> *@
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
                                             </div>
                                         </section>
 
 
 
+                                      
+
+
+
+                                      
+
+
+
                                         @if (Exist)
                                         {
-                                            <section class="section  " id="managing_partner">
+                                            <section class="section  " id="managing_partner" dir="rtl">
                                                 <div class="container">
                                                     <div class="row">
-                                                        <div class="col-md-3">
-                                                            <div class="section-info">
-                                                                <div class="title-hr"></div>
-                                                                <div class="info-title">Our Managing Partner</div>
-                                                            </div>
-                                                        </div>
+                                                    
                                                         <div class="col-md-9">
                                                             <div class="row-team row">
-                                                                <div class="col-team col-xs-6 col-md-4">
+                                                                <div class="col-team  col-12">
                                                                     <div class="team-profile">
                                                                         <img alt="" src="~/Content/images/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
                                                                         <div class="team-hover">
-                                                                            <div class="team-content">
+                                                                            <div class="team-content"  dir="rtl">
                                                                                 <div class="team-name">
                                                                                     <h6>@ManagingPartner.Name</h6>
                                                                                     <div class="team-spec">
-                                                                                        Managing Partner
+                                                                                        شريكنا الإداري
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="team-social">
                                                                                     <a href="" class="icon  icon-medium icon-apartment"></a>
                                                                                 </div>
                                                                             </div>
+                                                                             <div class="add-new-team">
+                                                                            <div class="add-new-text">
+                                                                                <div class="inner">
+                                                                                    @ManagingPartner.Description
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <form method="post" enctype="multipart/form-data">
+                                                                                <input class="bauhaus_upload_file" type="file">
+                                                                            </form>
                                                                         </div>
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="col-team col-xs-6 col-md-4">
-                                                                    <div class="add-new-team">
-                                                                        <div class="add-new-text">
-                                                                            <div class="inner">
-                                                                                @ManagingPartner.Description
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <form method="post" enctype="multipart/form-data">
-                                                                            <input class="bauhaus_upload_file" type="file">
-                                                                        </form>
-                                                                    </div>
+                                                                 
 
                                                                 </div>
                                                             </div>
                                                         </div>
-                                            </section>
-                                        }
-                                        @foreach (var department in Model.JobsDepartments)
-                                        {
-                                            <section class="section  " id="team_about">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
+                                                         <div class="col-md-3">
                                                             <div class="section-info">
                                                                 <div class="title-hr"></div>
-                                                                <div class="info-title">@department.Name</div>
+                                                                <div class="info-title"> شريكنا الإداري</div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <div class="row-team row">
+                                                            </div>
+                                                    </div>
+                                               </div>
+                                            </section>
+                                        }
+                                       
+                                            <section class="section  " id="team_about" dir="rtl">
+                                                <div class="container">
+                                                                  @foreach (var department in Model.JobsDepartments)
+                                        {
+                                                    <div class="row mb-5">
+                                                      
+                                                        <div class="col-lg-9 ">
+                                                            <div class="row row-team " dir="rtl">
                                                                 @foreach (var employee in Model.Employees.Where(x => x.DepartmentId == department.Id).ToList())
                                                                 {
-                                                                    <div class="col-team col-xs-6 col-md-3">
+                                                                    <div class="col-md-4 col-team ">
                                                                         <div class="team-profile">
                                                                             <img alt="" src="~/Images/System/@employee.ImageUrl">
                                                                             <div class="team-hover">
@@ -2083,13 +2040,128 @@
                                                                         </div>
                                                                     </div>
                                                                 }
+                                                                 
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="section-info">
+                                                                <div class="title-hr"></div>
+                                                                <div class="info-title">@department.Name</div>
+                                                            </div>
+                                                        </div>
+                                                 
+                                                    </div>
+                                                      }
+                                                </div>
+                                                 
+                                            </section>
+                
+                                                   <section class="section  "   dir="rtl">
+                                               <div class="container mb-5">
+                                                    <div class="row contact-section mb-5"   dir="rtl">
+                                                    <div class="col-6 col-lg-4 contact-section2">
+                                                            <i class="fa-solid fa-phone icon"></i>
+                                                            <div class="text">الاتصال المباشر</div>
+                                                             <div class="text">@Model.contact.MobilePhones</div>
+                                                        </div>
+                                                         <div class="col-6 col-lg-4 contact-section2 ">
+                                                          
+                                                             <i class="fa-solid fa-location-dot icon"></i>
+                                                             <div class="text">موقعنا</div>
+                                                        <div class="text"> <a href="https://goo.gl/maps/aSLd27hw4gX34HeH7" target="_blank">
+                                                                     
+                                                                    @Model.contact.Location
+                                                                </a></div>
+                                                        </div>
+                                                         <div class="col-6 col-lg-4 contact-section2">
+                                                             <i class="fa-solid fa-envelope icon"></i>
+                                                             <div class="text">email@gmail.com</div>
+                                                        </div>
+                                                         <div class="col-6 col-lg-4 contact-section2">
+                                                          
+                                                             <i class="fa-solid fa-business-time icon"></i>
+                                                             <div class="text">ساعات العمل</div>
+                                                        <div class="text"> @Model.contact.WorkHours</div>
+                                                        </div>
+                                                         
+                                                          
+                                                    </div>
+                                                 
+                                               </div>
+                                            <div class="container-fluid   contact-section3">
+
+                                                <div class="row " dir="rtl">
+                                                    <div class="col-12  ">
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.0174455461624!2d47.971314799999995!3d29.369778399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85872b7ad02f%3A0xe4e0ca10672f53a5!2z2LTYsdmD2Kkg2KfZiNi02YYg2YfZiNmFINmE2YTZhdmC2KfZiNmE2KfYqiDYp9mE2LnYp9mF2Kk!5e0!3m2!1sar!2skw!4v1720718430081!5m2!1sar!2skw" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                                     </div>
                                                 </div>
+                                            </div>
                                             </section>
-                                        }
+                                        <footer class="site-footer" dir="ltr">
+                                            <div class="container">
+                                                <div class="row" dir="rtl">
 
+
+                                                    <div class="col-6 col-lg-4 col-md-4">
+                                                        <h6>استمر في المواصلة</h6>
+                                                        <ul class="footer-links">
+                                                            <li>
+                                                                <a href="https://goo.gl/maps/aSLd27hw4gX34HeH7" target="_blank">
+                                                                    <i class="fa fa-location-arrow custom-icon" aria-hidden="true"></i>
+                                                                    @Model.contact.Location
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+
+                                                                    <i class="fa  fa-phone custom-icon" aria-hidden="true"></i>
+                                                                    @Model.contact.MobilePhones
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="col-6 col-lg-4 col-md-4">
+                                                        <h6>الاتصال المباشر:</h6>
+                                                        <ul class="footer-links">
+                                                            <li><a href=""><i class="fa  fa-phone custom-icon" aria-hidden="true"></i>@Model.contact.CallDirectly_Phone</a></li>
+                                                        </ul>
+                                                        <h6>ساعات العمل:</h6>
+                                                        <ul class="footer-links">
+                                                            <li><a href=""><i class="fa  fa-calendar-check custom-icon" aria-hidden="true"></i>@Model.contact.WorkHours</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-6 col-lg-4 col-md-4">
+                                                        <a class="brand" href="">
+                                                            <img alt="" src="Content/images/logo.jpg">
+                                                            <div class="brand-info">
+                                                                <div class="brand-name"></div>
+                                                                <div class="brand-text"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                                        <p class="copyright-text">
+                                                            Copyright &copy; 2017 All Rights Reserved
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                                        <ul class="social-icons">
+
+                                                            <li><a class="twitter" target="_blank" href="@Model.contact.Instagram"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a class="dribbble" target="_blank" href="@Model.contact.Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                                                            <li><a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </footer>
                                     </div>
                                 </div>
                             </div>

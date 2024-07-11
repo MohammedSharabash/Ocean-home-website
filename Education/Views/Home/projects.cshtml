@@ -1843,7 +1843,7 @@
                     </div>
                 </header>
 
-                <section class="wpb-content-wrapper">
+                <section class="wpb-content-wrapper mt-5" dir="rtl">
                     <div class="vc_row wpb_row vc_row-fluid">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="vc_column-inner">
@@ -1851,9 +1851,9 @@
                                     <div class="  ">
                                         <main class="page-header">
                                             <div class="container">
-                                                <h1>
-                                                    Architecture Is A Visual Art And The Building<br>
-                                                    Speak For Themselves
+                                                <h1 style="line-height:inherit;">
+                                                    الهندسة المعمارية هي فن بصري والبناء<br>
+                                                    التحدث عن أنفسهم
                                                 </h1>
                                             </div>
                                         </main>
@@ -1894,7 +1894,7 @@
                                                                         </p>
                                                                     </div>
                                                                 </div>
-                                                                <a href="/home/projectDetails?id=@project.Id" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
+                                                                <a href="/home/projectDetails?id=@project.Id" class="link-arrow">انظر المشروع <i class="icon ion-ios-arrow-right"></i></a>
                                                             </div>
                                                         </div>
 
@@ -1908,77 +1908,75 @@
                                 </div>
                             </div>
                         </div>
-                    </div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div><div class="vc_row wpb_row vc_row-fluid">
-                        <div class="wpb_column vc_column_container vc_col-sm-12" style="color: #DADADA;">
-                            <div class="vc_column-inner">
-                                <div class="wpb_wrapper">
-                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1702553608614">
-                                        <div class="wpb_wrapper">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <h2 class="section-title12">Contact Us</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div> 
+                    
+                                 
+                    <footer class="site-footer" dir="ltr">
+                                  <div class="container">
+                                    <div class="row" dir="rtl">
+                                      
+                                        
+                                      <div class="col-6 col-lg-4 col-md-4">
+                                        <h6>استمر في المواصلة</h6>
+                                        <ul class="footer-links">
+                                          <li><a href="https://goo.gl/maps/aSLd27hw4gX34HeH7" target="_blank">
+                                                <i class="fa fa-location-arrow custom-icon" aria-hidden="true"></i>
+                                                @Model.contact.Location
+                                              </a>
+                                          </li>
+                                          <li><a href="">
+                                              
+                                                <i class="fa  fa-phone custom-icon" aria-hidden="true"></i>
+                                                    @Model.contact.MobilePhones
+                                              </a>
+                                          </li>
+                                        </ul>
+                                      </div>
 
-
-                                    <section>
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-3">
-                                                    <div class="section-info">
-                                                        <div class="title-hr"></div>
-                                                        <div class="info-title">Keep in touch</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="row-contact row">
-                                                        <div class="col-contact col-lg-6">
-                                                            <h3 class="contact-title contact-top"></h3>
-                                                            <p class="contact-address text-muted"><strong></strong></p>
-                                                            @* <p class="contact-row">Location: Mirqab, Shyama’a Tower, 4th floor</p> *@
-                                                            <p class="contact-row">
-                                                                Location: @Model.contact.Location
-                                                                <a href="https://goo.gl/maps/aSLd27hw4gX34HeH7">
-                                                                    <i class="fa fa-location-arrow custom-icon" aria-hidden="true"></i>
-                                                                </a>
-                                                            </p>
-                                                            <p class="contact-row">
-                                                                Mobile Phone: @Model.contact.MobilePhones
-                                                            </p>
-                                                            @* <p class="contact-row">Telephone: +965 2225 1296</p>
-                                                            <p class="contact-row">Fax: +965 2225 1297</p>
-                                                            <p class="contact-row">Email: bcc@backcombined.com</p>
-                                                            <p class="contact-row">Recruitment Email:recruitment@backcombined.com</p>
-                                                            *@
-                                                        </div>
-                                                        <div class="col-contact col-lg-6">
-                                                            <p class="contact-top">
-                                                                <strong class="text-muted">Call directly:</strong>
-                                                            </p>
-                                                            <p class="phone-lg ">@Model.contact.CallDirectly_Phone</p>
-                                                            <p class="text-muted">
-                                                                <strong class="">Work Hours</strong><br>
-                                                                Week Days: @Model.contact.WorkHours
-                                                            </p>
-                                                            <div class="text-muted">
-                                                                <strong class="text-dark"></strong><br>
-                                                                <div class="contact-social social-list">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                      <div class="col-6 col-lg-4 col-md-4">
+                                        <h6>الاتصال المباشر:</h6>
+                                        <ul class="footer-links">
+                                            <li><a href=""><i class="fa  fa-phone custom-icon" aria-hidden="true"></i>@Model.contact.CallDirectly_Phone</a></li>
+                                        </ul>
+                                         <h6>ساعات العمل:</h6>
+                                        <ul class="footer-links"> 
+                                            <li><a href=""><i class="fa  fa-calendar-check custom-icon" aria-hidden="true"></i>@Model.contact.WorkHours</a></li>
+                                        </ul>
+                                      </div>
+                                <div class="col-6 col-lg-4 col-md-4">
+                                    <a class="brand" href="">
+                                        <img alt="" src="Content/images/logo.jpg">
+                                        <div class="brand-info">
+                                            <div class="brand-name"></div>
+                                            <div class="brand-text"></div>
                                         </div>
-                                    </section>
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                                    </div>
+                                    <hr>
+                                  </div>
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <p class="copyright-text">
+                                            Copyright &copy; 2017 All Rights Reserved  
+                                        </p>
+                                      </div>
+
+                                      <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <ul class="social-icons">
+                                            
+                                        <li><a class="twitter" target="_blank" href="@Model.contact.Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a class="dribbble" target="_blank" href="@Model.contact.Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                                        <li><a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a></li>
+                                    </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                        </footer>
+                             
+                            
+                     
 
             </div>
             </section>

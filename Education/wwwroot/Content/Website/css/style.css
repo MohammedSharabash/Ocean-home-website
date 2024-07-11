@@ -34,6 +34,7 @@ Copyright © All rights Reserved
 body {
     font-family: 'Rubik', sans-serif;
     position: relative;
+    direction:rtl;
 }
 
 a {
