@@ -7,7 +7,7 @@ namespace Ocean_Home.Models.Domain
 {
     public class AboutUS : BaseModel
     {
-        public string OurVision { get; set; }
+        public string OurVision { get; set;  }
         public string OurMessage { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
