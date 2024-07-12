@@ -3746,7 +3746,7 @@ a.brand:hover, a.brand:focus {
     padding: 45px 0 20px;
     font-size: 15px;
     line-height: 24px;
-    color: #737373;
+    color: #a38510;
 }
 
     .site-footer hr {
@@ -3768,11 +3768,11 @@ a.brand:hover, a.brand:focus {
     }
 
     .site-footer a {
-        color: #737373;
+        color: #a38510;
     }
 
         .site-footer a:hover {
-            color: #3366cc;
+            color: #a38510;
             text-decoration: none;
         }
 
@@ -3786,11 +3786,11 @@ a.brand:hover, a.brand:focus {
     }
 
     .footer-links a {
-        color: #737373
+        color: #a38510
     }
 
         .footer-links a:active, .footer-links a:focus, .footer-links a:hover {
-            color: #3366cc;
+            color: #a38510;
             text-decoration: none;
         }
 
