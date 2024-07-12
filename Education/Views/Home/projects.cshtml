@@ -1728,7 +1728,10 @@
                 text-decoration:;
                 text-transform:;
             }
-
+                        .btn-custom-dwonload {
+                background: #a38510bf !important;
+                border-radius: 25px !important;
+            }
         </style>
         <link href="~/style.css" rel="stylesheet" />
 
@@ -1775,35 +1778,44 @@
 
                 <!-- Sidebar Menu-->
 
-                <div class="menu">
-                    <span class="close-menu icon-cross2 right-boxed"></span>
-                    <div class="menu-lang right-boxed lang_sw">
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                    </div>
+                <div class="menu  " dir="rtl">
+
+                    <button type="button" class="close-menu"
+                            aria-expanded="false" aria-label="Close" style="
+
+                            position: absolute;
+                            top: 10%;
+                            right: 10%;
+                            background: transparent;
+                            box-shadow: none;
+                            text-shadow: none;
+                            border-radius: 7px;
+                                padding: 10px">
+
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+
 
 
                     <ul id="menu-side-menu" class=" menu-list right-boxed   ">
-                        <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-57 active "><a href="~/" aria-current="page">الصفحه الرئيسيه</a></li>
-                        <li id="menu-item-14440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14440"><a href="~/Home/about/">من نحن</a></li>
-                        <li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="~/home/projects/">المشاريع</a></li>
+
+                        <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-57   "><a href="/" aria-current="page">الصفحه الرئيسيه</a></li>
+                        <li id="menu-item-14440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14440"><a href="/Home/about/">من نحن</a></li>
+                        <li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419 active"><a href="~/home/projects">المشاريع</a></li>
                         <li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419">
-                            <a href=""@Url.Content("~/" + Model.contact.PDF)" class="btn btn-custom-dwonload" @* style="font-size: xx-large;" *@ title=" الملف التعريفي للشركة">
-                                الملف التعريفي للشركة
+                            <a target="_blank" href="@Url.Content("~/" + Model.contact.PDF)" class="btn btn-custom-dwonload" title="الملف التعريفي للشركة">
+                                الملف التعريفي للشركة
                             </a>
-                        </li> @* <li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="/contact/">Contact</a></li> *@
+                        </li>
                     </ul>
                     <div class="menu-footer right-boxed">
-                        
-                        <div class="social-list">
 
-                            <!-- Font Awesome for Instagram -->
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        <div class="social-list d-flex flex-row">
 
-                            <a target="_blank" class="fa fa-instagram" href="@Model.contact.Instagram"></a>
 
-                            <a target="_blank" href="@Model.contact.Tiktok"
-                               class="icon ion-social-tiktok"></a>
+                            <a class="twitter" target="_blank" href="@Model.contact.Instagram"><i class="fa fa-instagram"></i></a>
+                            <a class="dribbble" target="_blank" href="@Model.contact.Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a>
 
                         </div>
 
@@ -1825,13 +1837,11 @@
 
 
                     <a class="brand" href="">
-
                         <img alt="" src="Content/images/logo.jpg">
                         <div class="brand-info">
                             <div class="brand-name"></div>
                             <div class="brand-text"></div>
                         </div>
-
                     </a>
                     <!-- Font Awesome for Instagram -->
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -1844,7 +1854,7 @@
                 </header>
 
                 <section class="wpb-content-wrapper mt-5" dir="rtl">
-                    <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="vc_row wpb_row vc_row-fluid" style="margin-top: 100px;">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="vc_column-inner">
                                 <div class="wpb_wrapper">
@@ -1911,7 +1921,14 @@
                     </div> 
                     
                                  
-                    <footer class="site-footer" dir="ltr">
+                    
+                             
+                            
+                     
+
+                     
+                </section>
+            <footer class="site-footer" dir="ltr">
                                   <div class="container">
                                     <div class="row" dir="rtl">
                                       
@@ -1958,8 +1975,8 @@
                                   <div class="container">
                                     <div class="row">
                                       <div class="col-md-8 col-sm-6 col-xs-12">
-                                        <p class="copyright-text">
-                                            Copyright &copy; 2017 All Rights Reserved  
+                                <p class="copyright-text" dir="rtl">
+                                             حقوق النشر &copy; 2024 جميع الحقوق محفوظة لـ Ocean Home  
                                         </p>
                                       </div>
 
@@ -1974,12 +1991,6 @@
                                     </div>
                                   </div>
                         </footer>
-                             
-                            
-                     
-
-            </div>
-            </section>
             <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css">
 
             <script type="text/javascript">

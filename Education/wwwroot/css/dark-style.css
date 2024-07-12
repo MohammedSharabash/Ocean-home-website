@@ -4732,8 +4732,7 @@ a.brand:focus {
     fill: #e54225;
 }
 
-@media screen and (max-width: 500px) {
-}
+
 
 
 .contact-section {
@@ -4743,6 +4742,11 @@ a.brand:focus {
     gap: 20px;
     font-family: Arial, sans-serif;
     
+}
+@media screen and (max-width: 700px) {
+    .contact-section {
+        display: block;
+    }
 }
 .contact-section2 {
     display: flex;
@@ -4758,7 +4762,7 @@ a.brand:focus {
 .contact-section2 .icon {
     font-size: 50px;
     margin-bottom: 10px;
-    color: green;
+    color: #a38510;
 }
 
 .contact-section2 .text {
