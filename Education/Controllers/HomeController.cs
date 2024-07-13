@@ -88,6 +88,29 @@ namespace Ocean_Home.Controllers
             vm.Employees = _Employee.Get(x => x.IsDeleted == false && x.DepartmentId > 0 && !x.Department.IsDeleted).ToList();
             vm.JobsDepartments = _JobsDepartments.Get(x => x.IsDeleted == false).OrderBy(x => x.Sort).ToList();
             vm.Managers = _Manager.Get(x => x.IsDeleted == false).ToList();
+            vm.contact = _ContactUS.Get(x => x.IsDeleted == false).First();
+
+            return View(vm);
+        }
+        public IActionResult contactus()
+        {
+            var vm = new IndexVm();
+            vm.aboutUS = _AboutUS.Get(x => x.IsDeleted == false).First();
+            vm.Employees = _Employee.Get(x => x.IsDeleted == false && x.DepartmentId > 0 && !x.Department.IsDeleted).ToList();
+            vm.JobsDepartments = _JobsDepartments.Get(x => x.IsDeleted == false).OrderBy(x => x.Sort).ToList();
+            vm.Managers = _Manager.Get(x => x.IsDeleted == false).ToList();
+            vm.contact = _ContactUS.Get(x => x.IsDeleted == false).First();
+
+            return View(vm);
+        }
+        public IActionResult downloadpdf()
+        {
+            var vm = new IndexVm();
+            vm.aboutUS = _AboutUS.Get(x => x.IsDeleted == false).First();
+            vm.Employees = _Employee.Get(x => x.IsDeleted == false && x.DepartmentId > 0 && !x.Department.IsDeleted).ToList();
+            vm.JobsDepartments = _JobsDepartments.Get(x => x.IsDeleted == false).OrderBy(x => x.Sort).ToList();
+            vm.Managers = _Manager.Get(x => x.IsDeleted == false).ToList();
+            vm.contact = _ContactUS.Get(x => x.IsDeleted == false).First();
 
             return View(vm);
         }
@@ -103,6 +126,7 @@ namespace Ocean_Home.Controllers
             var images = _ProjectImages.Get(x => x.IsDeleted == false && x.ProjectId == id).OrderBy(x => x.Sort).ToList();
             vm.Projects.Add(project);
             vm.ProjectImages = images;
+            vm.contact = _ContactUS.Get(x => x.IsDeleted == false).First();
             return View(vm);
         }
         private IndexVm GetData()

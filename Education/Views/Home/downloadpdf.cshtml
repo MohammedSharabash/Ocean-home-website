@@ -1,6 +1,10 @@
 ﻿@model Ocean_Home.Models.ViewModel.IndexVm
+@using Ocean_Home.Models.Domain
 @{
     Layout = null;
+    var Exist = Model.Managers.Exists(x => x.jobTitle == Ocean_Home.Models.Enums.JobTitle.ManagingPartner);
+    Manager ManagingPartner = new Manager();
+    if (Exist) ManagingPartner = Model.Managers.FirstOrDefault(x => x.jobTitle == Ocean_Home.Models.Enums.JobTitle.ManagingPartner);
 }
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#" class="no-js">
@@ -1245,7 +1249,7 @@
 <body class="home page-template page-template--- page-template-public page-template-views page-template-revslider-page-template page-template---publicviewsrevslider-page-template-php page page-id-7 custom-background bauhaus_blog wpb-js-composer js-comp-ver-6.0.5 vc_responsive">
 
     <!DOCTYPE HTML>
-    <html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#">
+    <html lang="en-US" prefix="og: https://ogp.me/ns#">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1538,7 +1542,6 @@
         <link rel="icon" href="Content/images/logo.jpg" type="image/gif" />
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="Content/css/jquery.mCustomScrollbar.min.css">
-        <link rel="stylesheet" href="Content/css/style_light.css">
         <!-- FontAwesome CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <!-- FancyBox CSS -->
@@ -1800,9 +1803,9 @@
 
                     <ul id="menu-side-menu" class=" menu-list right-boxed   ">
 
-                        <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-57   "><a href="/" aria-current="page">الصفحه الرئيسيه</a></li>
-                        <li id="menu-item-14440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14440"><a href="/Home/about/">من نحن</a></li>
-                        <li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419 active"><a href="~/home/projects">المشاريع</a></li>
+                        <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-57  "><a href="/" aria-current="page">الصفحه الرئيسيه</a></li>
+                        <li id="menu-item-14440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14440 active"><a href="/Home/about/">من نحن</a></li>
+                        <li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="~/home/projects">المشاريع</a></li>
                         <li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="~/home/contactus">تواصل معنا</a></li>
                         <li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="/home/downloadpdf" class="btn btn-custom-dwonload">الملف التعريفي للشركة</a>
 
@@ -1852,146 +1855,96 @@
                     </div>
                 </header>
 
-                <section class="wpb-content-wrapper mt-5" dir="rtl">
-                    <div class="vc_row wpb_row vc_row-fluid" style="margin-top: 100px;">
-                        <div class="wpb_column vc_column_container vc_col-sm-12">
-                            <div class="vc_column-inner">
-                                <div class="wpb_wrapper">
-                                    <div class="  ">
-                                        <main class="page-header">
+                <div class="content" dir="rtl">
+
+                    <div class="page-inner" dir="rtl">
+                        <div class="vc_row wpb_row vc_row-fluid" dir="rtl">
+                            <div class="wpb_column vc_column_container vc_col-sm-12" dir="rtl">
+                                <div class="vc_column-inner" dir="rtl">
+                                    <div class="wpb_wrapper" dir="rtl">
+
+
+                                        <!-- downloadpdf -->
+                                        <section class="section  " dir="rtl">
                                             <div class="container">
-                                                <h1 style="line-height:inherit;">
-                                                    الهندسة المعمارية هي فن بصري والبناء<br>
-                                                    التحدث عن أنفسهم
-                                                </h1>
+                                                <div class="row" dir="rtl">
+                                                    <div class="col-12">
+                                                        <object data="@Url.Content("~/" + Model.contact.PDF)" type="application/pdf" width="100%" height="500px">
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </main>
+                                        </section>
+                                        <!-- downloadpdf -->
+                                        <footer class="site-footer" dir="ltr">
+                                            <div class="container">
+                                                <div class="row" dir="rtl">
 
-                                        <div class="content  ">
-                                            <div class="projects">
-                                                <div class="container">
-                                                    <div class="filter-content-2">
-                                                        <ul class="filter js-filter">
-                                                            <li class="active"><a href="#" data-filter="*">All</a></li>
+                                                    <div class="col-6 col-lg-4 col-md-4">
+                                                        <h6>استمر في المواصلة</h6>
+                                                        <ul class="footer-links">
+                                                            <li>
+                                                                <a href="https://goo.gl/maps/aSLd27hw4gX34HeH7" target="_blank">
+                                                                    <i class="fa fa-location-arrow custom-icon" aria-hidden="true"></i>
+                                                                    @Model.contact.Location
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
 
-                                                            @foreach (var department in Model.ProjectsDepartments)
-                                                            {
-                                                                <li>
-                                                                    <a href="#" data-filter=".building">@department.Name </a>
-                                                                </li>
-                                                            }
+                                                                    <i class="fa  fa-phone custom-icon" aria-hidden="true"></i>
+                                                                    @Model.contact.MobilePhones
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="col-6 col-lg-4 col-md-4">
+                                                        <h6>الاتصال المباشر:</h6>
+                                                        <ul class="footer-links">
+                                                            <li><a href=""><i class="fa  fa-phone custom-icon" aria-hidden="true"></i>@Model.contact.CallDirectly_Phone</a></li>
+                                                        </ul>
+                                                        <h6>ساعات العمل:</h6>
+                                                        <ul class="footer-links">
+                                                            <li><a href=""><i class="fa  fa-calendar-check custom-icon" aria-hidden="true"></i>@Model.contact.WorkHours</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-6 col-lg-4 col-md-4">
+                                                        <a class="brand" href="">
+                                                            <img alt="" src="Content/images/logo.jpg">
+                                                            <div class="brand-info">
+                                                                <div class="brand-name"></div>
+                                                                <div class="brand-text"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                                        <p class="copyright-text" dir="rtl">
+                                                            حقوق النشر &copy; 2024 جميع الحقوق محفوظة لـ Ocean Home
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                                        <ul class="social-icons">
+
+                                                            <li><a class="twitter" target="_blank" href="@Model.contact.Instagram"><i class="fa fa-instagram"></i></a></li>
+                                                            <li><a class="dribbble" target="_blank" href="@Model.contact.Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                                                            <li><a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="grid-items js-isotope js-grid-items" style="position: relative; height: 3361.15px;">
-
-
-
-
-                                                    @foreach (var project in Model.Projects)
-                                                    {
-                                                        <div style="cursor: pointer; width: 434px; position: absolute; left: 631px; top: 0px;" onclick="window.location = '/home/projectDetails'" class="grid-item interior js-isotope-item js-grid-item">
-                                                            <div class="project-item item-shadow">
-                                                                <img alt="" class="img-responsive" src="~/Images/Project/@project.Images.First().ImageUrl">
-                                                                <div class="project-hover">
-                                                                    <div class="project-hover-content">
-                                                                        <h4 class="project-title">@project.Name</h4>
-                                                                        <p class="project-description">
-                                                                            @(project.Description.Length > 100
-                                                                                ? project.Description.Substring(0, 100) + "..."
-                                                                                : project.Description)
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <a href="/home/projectDetails?id=@project.Id" class="link-arrow">انظر المشروع <i class="icon ion-ios-arrow-right"></i></a>
-                                                            </div>
-                                                        </div>
-
-
-                                                    }
-                                                </div>
                                             </div>
-                                        </div>
+                                        </footer>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-                </section>
-                <footer class="site-footer" dir="ltr">
-                    <div class="container">
-                        <div class="row" dir="rtl">
-
-
-                            <div class="col-6 col-lg-4 col-md-4">
-                                <h6>استمر في المواصلة</h6>
-                                <ul class="footer-links">
-                                    <li>
-                                        <a href="https://goo.gl/maps/aSLd27hw4gX34HeH7" target="_blank">
-                                            <i class="fa fa-location-arrow custom-icon" aria-hidden="true"></i>
-                                            @Model.contact.Location
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-
-                                            <i class="fa  fa-phone custom-icon" aria-hidden="true"></i>
-                                            @Model.contact.MobilePhones
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="col-6 col-lg-4 col-md-4">
-                                <h6>الاتصال المباشر:</h6>
-                                <ul class="footer-links">
-                                    <li><a href=""><i class="fa  fa-phone custom-icon" aria-hidden="true"></i>@Model.contact.CallDirectly_Phone</a></li>
-                                </ul>
-                                <h6>ساعات العمل:</h6>
-                                <ul class="footer-links">
-                                    <li><a href=""><i class="fa  fa-calendar-check custom-icon" aria-hidden="true"></i>@Model.contact.WorkHours</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6 col-lg-4 col-md-4">
-                                <a class="brand" href="">
-                                    <img alt="" src="Content/images/logo.jpg">
-                                    <div class="brand-info">
-                                        <div class="brand-name"></div>
-                                        <div class="brand-text"></div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-sm-6 col-xs-12">
-                                <p class="copyright-text" dir="rtl">
-                                    حقوق النشر &copy; 2024 جميع الحقوق محفوظة لـ Ocean Home
-                                </p>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <ul class="social-icons">
-
-                                    <li><a class="twitter" target="_blank" href="@Model.contact.Instagram"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a class="dribbble" target="_blank" href="@Model.contact.Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
-                                    <li><a target="_blank" class="fa fa-whatsapp" href="https://wa.me/@Model.contact.WhatsApp"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                </div>
                 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css">
 
                 <script type="text/javascript">
@@ -2026,7 +1979,7 @@
                     /* <![CDATA[ */
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
                     var bauhaus_obj = { "ajaxurl": "https:\/\/backcombined.com\/wp-admin\/admin-ajax.php", "theme_url": "https:\/\/backcombined.com\/wp-content\/themes\/bauhaus", "tag": "", "year": "", "monthnum": "", "day": "", "s": "", "type": "listing", "max_num_pages": "0", "cat": "0", "header_pos": "1" };
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* ]]> */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* ]]> */
                 </script>
                 <script type="text/javascript" src="~/js/main.js" id="bauhaus-main-js"></script>
                 <script type="text/javascript" src="~/js/animsition.min.js" id="animsition-js"></script>
